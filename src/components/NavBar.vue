@@ -4,7 +4,7 @@
       <router-link class="navbar-brand" to="/">
         <img src="../assets/colorful_logo.png" alt="logo">
       </router-link>
-      <section class="container-links">
+      <section class="container-links dark-title">
         <div class="navbar-text">QUEM SOMOS</div>
         <div class="navbar-text">PARCEIROS</div>
         <div class="navbar-text">NOTÍCIAS</div>
@@ -12,6 +12,16 @@
         <div class="navbar-text">AGENDA</div>
         <div class="navbar-text">FALE CONOSCO</div>
       </section>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown button
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 </template>
@@ -58,9 +68,33 @@ a {
     min-width: 60px;
   }
 }
-@media (max-width: 991px) {
-.navbar-text {
-  margin: auto 10px;
+.dropdown {
+  display: none;
 }
+@media (max-width: 991px) {
+  .navbar-text {
+    margin: auto 10px;
+  }
+  .dark-title {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 767px) {
+  .dark-title {
+    font-size: 0.7em;
+  }
+}
+@media (max-width: 485px) {
+  .container-links {
+    display: none;
+  }
+  a {
+    img {
+      width: 60px
+    }
+  }
+  .dropdown {
+    display: block;
+  }
 }
 </style>
