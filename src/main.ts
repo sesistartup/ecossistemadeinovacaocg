@@ -1,16 +1,19 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-import axios from 'axios'
 import App from './App.vue'
+import router from './router';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap";
+// Global components
+import NavBar from './components/NavBar.vue'
 
-const $axios = Symbol()
 
 const pinia = createPinia()
 const ecossistema = createApp(App)
 
+ecossistema.component('NavBar', NavBar)
+
 ecossistema.use(pinia)
-ecossistema.provide($axios, axios)
+ecossistema.use(router)
+
 ecossistema.mount('#app')
-
-// createApp(App).use(pinia).mount('#app')
-

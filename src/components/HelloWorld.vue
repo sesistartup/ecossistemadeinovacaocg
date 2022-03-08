@@ -26,14 +26,22 @@ const count = ref(0)
     <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Docs</a>
   </p>
 
-  <button type="button" @click="count++">count is: {{ count }}</button>
+  <button class="btn btn-primary" type="button" @click="count++">count is: {{ count }}</button>
   <p>
     Edit
     <code>components/HelloWorld.vue</code> to test hot module replacement.
   </p>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+button {
+  background-color: blueviolet;
+}
+p {
+  code {
+    font-size: 2rem;
+  }
+}
 a {
   color: #42b983;
 }
