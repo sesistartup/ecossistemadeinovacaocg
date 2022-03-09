@@ -116,8 +116,7 @@ const info = [
   footer {
     background-color: #28353e;
     padding: 0.5rem;
-    position: absolute;
-    bottom: 0;
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;

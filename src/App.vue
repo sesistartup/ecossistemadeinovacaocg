@@ -52,11 +52,11 @@ import { useFruitStore } from './stores/fruits/store'
 }
 @font-face {
   font-family: 'Gotham-Book';
-  src: url(./assets/fonts/Gotham\ Book.otf);
+  src: url(src/assets/fonts/Gotham\ Book.otf);
 }
 @font-face {
   font-family: 'Lulu-Bold';
-  src: url(./assets/fonts/FontsFree-Net-Lulo-Clean-W01-One-Bold.ttf);
+  src: url(src/assets/fonts/FontsFree-Net-Lulo-Clean-W01-One-Bold.ttf);
 }
 .dark-title, .light-title {
   font-family: 'Lulu-Bold';
