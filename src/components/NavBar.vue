@@ -5,21 +5,16 @@
         <img src="../assets/colorful_logo.png" alt="logo">
       </router-link>
       <section class="container-links dark-title">
-        <div class="navbar-text">QUEM SOMOS</div>
-        <div class="navbar-text">PARCEIROS</div>
-        <div class="navbar-text">NOTÍCIAS</div>
-        <div class="navbar-text">DOCUMENTOS</div>
-        <div class="navbar-text">AGENDA</div>
-        <div class="navbar-text">FALE CONOSCO</div>
+        <router-link :to="link.path" v-for="link in maisInfos" class="navbar-text">{{ link.title }}</router-link> 
       </section>
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-          Dropdown button
+      <div class="dropdown dropstart">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="menuInfos" data-bs-toggle="dropdown" aria-expanded="false">
+          <div v-for="hamburguer in 3" class="hamburguer" />
         </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><a class="dropdown-item" href="#">Action</a></li>
-          <li><a class="dropdown-item" href="#">Another action</a></li>
-          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <ul class="dropdown-menu" aria-labelledby="menuInfos">
+          <li v-for="link in maisInfos">
+            <router-link :to="link.path" class="dropdown-item">{{ link.title }}</router-link> 
+          </li>
         </ul>
       </div>
     </div>
@@ -27,11 +22,38 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue';
+import { onMounted, reactive } from 'vue';
 
 defineProps<{
   isTransparent: Boolean
 }>()
+
+const maisInfos = reactive([
+  {
+    title: 'QUEM SOMOS',
+    path: '/quem-somos'
+  },
+  {
+    title: 'PARCEIROS',
+    path: '/parceiros'
+  },
+  {
+    title: 'NOTÍCIAS',
+    path: '/noticias'
+  },
+  {
+    title: 'DOCUMENTOS',
+    path: '/documentos'
+  },
+  {
+    title: 'AGENDA',
+    path: '/agenda'
+  },
+  {
+    title: 'FALE CONOSCO',
+    path: '/fale-conosco'
+  }
+])
 
 onMounted(() => {
   // TODO: terminar centralização relativa
@@ -61,6 +83,7 @@ onMounted(() => {
 }
 .navbar-text {
   margin: auto 20px;
+  text-decoration: none;
 }
 a {
   img {
@@ -71,9 +94,26 @@ a {
 .dropdown {
   display: none;
 }
+.hamburguer {
+  height: 4px;
+  width: 30px;
+  background-color: gray;
+  border-radius: 25px;
+}
+.dropdown-toggle {
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  height: 40px;
+  justify-content: space-between;
+  padding: 0;
+  margin-right: 30px;
+}
 @media (max-width: 991px) {
   .navbar-text {
-    margin: auto 10px;
+    margin: 5px 10px;
+    padding: 0;
   }
   .dark-title {
     font-size: 1rem;
@@ -95,6 +135,9 @@ a {
   }
   .dropdown {
     display: block;
+  }
+  .container-fluid {
+    justify-content: space-between;
   }
 }
 </style>

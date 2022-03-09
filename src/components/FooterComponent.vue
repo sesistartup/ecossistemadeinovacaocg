@@ -136,7 +136,8 @@ const info = [
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    width: 100%;
   }
   .img-container {
     height: 80px;
@@ -192,6 +193,12 @@ const info = [
   }
   .highlight {
     background: radial-gradient(#e66465, #28353e);
+  }
+  @media (min-width: 1920px) {
+    .container-list {
+      width: unset;
+      justify-content: center;
+    }
   }
   @media (max-width: 1068px) {
     .img-container {
