@@ -50,4 +50,32 @@ import { useFruitStore } from './stores/fruits/store'
   text-align: center;
   color: #2c3e50;
 }
+@font-face {
+  font-family: 'Gotham-Book';
+  src: url(src/assets/fonts/Gotham\ Book.otf);
+}
+@font-face {
+  font-family: 'Lulu-Bold';
+  src: url(src/assets/fonts/FontsFree-Net-Lulo-Clean-W01-One-Bold.ttf);
+}
+.dark-title, .light-title {
+  font-family: 'Lulu-Bold';
+  font-size: 1.2rem;
+}
+.light-title {
+  color: #fff
+}
+.dark-title {
+  color: #000;
+}
+.dark-body-text, .light-body-text {
+  font-family: 'Gotham-Book';
+  font-size: 0.6rem;
+}
+.dark-body-text {
+  color: #000;
+}
+.light-body-text {
+  color: #fff;
+}
 </style>

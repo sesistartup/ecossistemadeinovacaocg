@@ -4,24 +4,56 @@
       <router-link class="navbar-brand" to="/">
         <img src="../assets/colorful_logo.png" alt="logo">
       </router-link>
-      <section class="container-links">
-        <div class="navbar-text">QUEM SOMOS</div>
-        <div class="navbar-text">PARCEIROS</div>
-        <div class="navbar-text">NOTÍCIAS</div>
-        <div class="navbar-text">DOCUMENTOS</div>
-        <div class="navbar-text">AGENDA</div>
-        <div class="navbar-text">FALE CONOSCO</div>
+      <section class="container-links dark-title">
+        <router-link :to="link.path" v-for="link in maisInfos" class="navbar-text">{{ link.title }}</router-link> 
       </section>
+      <div class="dropdown dropstart">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="menuInfos" data-bs-toggle="dropdown" aria-expanded="false">
+          <div v-for="hamburguer in 3" class="hamburguer" />
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="menuInfos">
+          <li v-for="link in maisInfos">
+            <router-link :to="link.path" class="dropdown-item">{{ link.title }}</router-link> 
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue';
+import { onMounted, reactive } from 'vue';
 
 defineProps<{
   isTransparent: Boolean
 }>()
+
+const maisInfos = reactive([
+  {
+    title: 'QUEM SOMOS',
+    path: '/quem-somos'
+  },
+  {
+    title: 'PARCEIROS',
+    path: '/parceiros'
+  },
+  {
+    title: 'NOTÍCIAS',
+    path: '/noticias'
+  },
+  {
+    title: 'DOCUMENTOS',
+    path: '/documentos'
+  },
+  {
+    title: 'AGENDA',
+    path: '/agenda'
+  },
+  {
+    title: 'FALE CONOSCO',
+    path: '/fale-conosco'
+  }
+])
 
 onMounted(() => {
   // TODO: terminar centralização relativa
@@ -51,6 +83,7 @@ onMounted(() => {
 }
 .navbar-text {
   margin: auto 20px;
+  text-decoration: none;
 }
 a {
   img {
@@ -58,9 +91,53 @@ a {
     min-width: 60px;
   }
 }
-@media (max-width: 991px) {
-.navbar-text {
-  margin: auto 10px;
+.dropdown {
+  display: none;
 }
+.hamburguer {
+  height: 4px;
+  width: 30px;
+  background-color: gray;
+  border-radius: 25px;
+}
+.dropdown-toggle {
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  height: 40px;
+  justify-content: space-between;
+  padding: 0;
+  margin-right: 30px;
+}
+@media (max-width: 991px) {
+  .navbar-text {
+    margin: 5px 10px;
+    padding: 0;
+  }
+  .dark-title {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 767px) {
+  .dark-title {
+    font-size: 0.7em;
+  }
+}
+@media (max-width: 485px) {
+  .container-links {
+    display: none;
+  }
+  a {
+    img {
+      width: 60px
+    }
+  }
+  .dropdown {
+    display: block;
+  }
+  .container-fluid {
+    justify-content: space-between;
+  }
 }
 </style>

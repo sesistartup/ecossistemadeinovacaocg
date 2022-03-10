@@ -6,12 +6,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap";
 // Global components
 import NavBar from './components/NavBar.vue'
+import FooterComponent from './components/FooterComponent.vue'
 
 
 const pinia = createPinia()
 const ecossistema = createApp(App)
 
 ecossistema.component('NavBar', NavBar)
+ecossistema.component('FooterComponent', FooterComponent)
 
 ecossistema.use(pinia)
 ecossistema.use(router)
