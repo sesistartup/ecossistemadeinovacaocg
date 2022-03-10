@@ -1,5 +1,5 @@
 <template>
-  <button type="button" class="btn btn-primary general-btn" :id="id">
+  <button type="button" class="btn btn-primary general-btn" :id="id" @mouseover="glowBg($el)" @mouseout="unglowBg($el)">
     <router-link v-if="!isExternalLink" :to="link" class="text">{{ btnText }}</router-link>
     <a v-else :href="link" class="text">{{ btnText }}</a>
   </button>
@@ -9,6 +9,7 @@
 import { onMounted } from 'vue';
 
   const props = defineProps<{
+    // TODO: set prop to change background color when mouse cursos is over button
     btnText: string
     isExternalLink: boolean
     link: string
@@ -32,6 +33,12 @@ const applyCss = (bgColor: string, w: string, h: string, textColor: string) => {
     color: ${textColor};
     text-decoration: none;
   `
+}
+const glowBg = (element: any) => {
+  element.style.backgroundColor = '#4dcd63'
+}
+const unglowBg = (element: any) => {
+  element.style.backgroundColor = props.bgColor
 }
 onMounted(() => {
   applyCss(props.bgColor, props.width, props.height, props.textColor)

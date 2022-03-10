@@ -1,13 +1,12 @@
 <!-- este componente é um container de prósito geral segmentado por colunas que recebe título, imagem (ou não) e textos. -->
 <template>
   <section class="container-fluid general-container" :id="id">
-    <h1 :class="[ darkTitle ? 'dark-title' : 'light-title' ]">{{ title }}</h1>
+    <h1 :class="[ darkTitle ? 'dark-title' : 'light-title' ]" class="mb-5">{{ title }}</h1>
     <main class="d-flex">
-      <div v-for="content in contentArray">
+      <div v-for="(content, index) in contentArray" :key="index" :class="isUrl(content) ? 'is-img' : 'is-arcticle'">
         <img v-if="isUrl(content)" :src="content" alt="ilustrative-image">
         <article v-else :class="[ darkTitle ? 'dark-body-text' : 'light-body-text' ]">
           {{ content }}
-          <!-- <button v-if="hasKnowMoreBtn" type="button" class="btn btn-primary know-more">SAIBA MAIS</button> -->
           <GeneralBtn v-if="hasKnowMoreBtn"
             btnText="SAIBA MAIS"
             :isExternalLink="false"
@@ -60,16 +59,16 @@ onMounted(() => {
       width: 100%;
     }
   }
-  main.d-flex > div:first-child {
+  main.d-flex > div {
     display: flex;
     align-items: center;
-    margin-right: 15px;
-    article {
-      font-size: 1rem;
-      text-align: justify;
-      display: flex;
-      flex-direction: column;
-    }
+  }
+  .is-arcticle article {
+    font-size: 1rem;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    margin: 0 15px;
   }
   @media (max-width: 991px) {
     section.general-container {
@@ -82,8 +81,17 @@ onMounted(() => {
     }
   }
   @media (max-width: 576px) {
-    main.d-flex > div:nth-child(2n) {
+    main.d-flex {
+      flex-direction: column;
+      div.is-arcticle {
+        margin-bottom: 10px;
+      }
+    }
+    main.d-flex > div.is-img {
       display: none;
+    }
+    section > h1 {
+      margin-bottom: 1.5rem !important;
     }
   }
 </style>
