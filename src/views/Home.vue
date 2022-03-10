@@ -2,10 +2,12 @@
   <NavBar :is-transparent="true"/>
   <section class="container-fluid">
     <main>
-      <figure>
-        <img src="../assets/home/fundo.png" alt="workspace_image">
-        <figcaption class="d-none">workspace_image</figcaption>
-      </figure>
+      <Banner 
+        path="src/assets/home/fundo.png"
+        figcaption="workspace_image"
+        img-alt="workspace_image"
+        pixels-bg-height="710px"
+      />
       <GeneralContainer
         title="SLOGAN PARA APRESENTAR QUEM SOMOS"
         :dark-title="true"
@@ -14,7 +16,9 @@
         bg-color="#f6f6f6"
         id="presentation-container"
       />
-      <Partners />
+      <Partners 
+        :logos-url-array="logosParceiros"
+      />
       <GeneralContainer
         title="MAIS SOBRE O ECOSSISTEMA"
         :dark-title="false"
@@ -33,22 +37,20 @@ import GeneralContainer from '../components/general/GeneralContainer.vue';
 import Banner from '../components/general/Banner.vue'
 import Partners from '../components/parceiros/Partners.vue';
 
+const logosParceiros: string[] = [
+  'src/assets/home/carousel/embrapa.png',
+  'src/assets/home/carousel/estacio.png',
+  'src/assets/home/carousel/oab.png',
+  'src/assets/home/carousel/orthos.png',
+  'src/assets/home/carousel/sesi.png',
+  'src/assets/home/carousel/uems.png',
+  'src/assets/home/carousel/unigran.png'
+]
+
 </script>
 
 <style scoped lang="scss">
   section.container-fluid {
     padding: 0;
-    main {
-      figure {
-        margin: 0;
-        img {
-          width: -webkit-fill-available;
-          height: -webkit-fill-available
-        }
-      }
-    }
   }
-  // figure {
-  //   background: url('../assets/home/fundo.png');
-  // }
 </style>
