@@ -12,7 +12,16 @@
         :content-array="['Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ad adipisci reiciendis dignissimos soluta sed iusto fugiat suscipit enim. Esse vero beatae quia praesentium, repellendus doloremque provident maiores eum suscipit.', 'src/assets/home/people_and_postits.png']"
         :has-know-more-btn="true"
         bg-color="#f6f6f6"
-        id="oi"
+        id="presentation-container"
+      />
+      <Partners />
+      <GeneralContainer
+        title="MAIS SOBRE O ECOSSISTEMA"
+        :dark-title="false"
+        :content-array="['src/assets/home/white_logo.png', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ad adipisci reiciendis dignissimos soluta sed iusto fugiat suscipit enim. Esse vero beatae quia praesentium, repellendus doloremque provident maiores eum suscipit.', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ad adipisci reiciendis dignissimos soluta sed iusto fugiat suscipit enim. Esse vero beatae quia praesentium, repellendus doloremque provident maiores eum suscipit.']"
+        :has-know-more-btn="false"
+        bg-color="#639280"
+        id="more-info-container"
       />
     </main>
   </section>
@@ -21,6 +30,7 @@
 
 <script setup lang="ts">
 import GeneralContainer from '../components/GeneralContainer.vue';
+import Partners from '../components/parceiros/Partners.vue';
 
 </script>
 
