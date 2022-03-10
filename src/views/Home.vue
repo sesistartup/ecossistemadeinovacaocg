@@ -20,7 +20,8 @@
 </template>
 
 <script setup lang="ts">
-import GeneralContainer from '../components/GeneralContainer.vue';
+import GeneralContainer from '../components/general/GeneralContainer.vue';
+import Banner from '../components/general/Banner.vue'
 
 </script>
 

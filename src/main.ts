@@ -5,8 +5,8 @@ import router from './router';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap";
 // Global components
-import NavBar from './components/NavBar.vue'
-import FooterComponent from './components/FooterComponent.vue'
+import NavBar from './components/general/NavBar.vue'
+import FooterComponent from './components/general/FooterComponent.vue'
 
 
 const pinia = createPinia()
