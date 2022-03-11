@@ -1,8 +1,8 @@
 <script setup lang="ts">
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import HelloWorld from './components/HelloWorld.vue'
-import { useFruitStore } from './stores/fruits/store'
+// import HelloWorld from './components/general/HelloWorld.vue'
+// import { useFruitStore } from './stores/fruits/store'
 // import NavBar from './components/NavBar.vue';
 
 // const fruitStore = useFruitStore() // atribuindo state
@@ -77,5 +77,13 @@ import { useFruitStore } from './stores/fruits/store'
 }
 .light-body-text {
   color: #fff;
+}
+.green-btn {
+  border: none;
+  font-family: 'Lulu-Bold';
+  background-color: #49907f;
+}
+.green-btn:hover {
+  background-color: aquamarine;
 }
 </style>
