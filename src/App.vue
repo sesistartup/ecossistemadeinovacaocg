@@ -78,4 +78,12 @@
 .light-body-text {
   color: #fff;
 }
+.green-btn {
+  border: none;
+  font-family: 'Lulu-Bold';
+  background-color: #49907f;
+}
+.green-btn:hover {
+  background-color: aquamarine;
+}
 </style>
