@@ -2,7 +2,7 @@
   <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
       <router-link class="navbar-brand" to="/">
-        <img src="src/assets/colorful_logo.png" alt="logo">
+        <img src="/src/assets/colorful_logo.png" alt="logo">
       </router-link>
       <section class="container-links dark-title">
         <router-link :to="link.path" v-for="link in maisInfos" class="navbar-text">{{ link.title }}</router-link> 

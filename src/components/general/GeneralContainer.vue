@@ -3,7 +3,7 @@
   <section class="container-fluid general-container" :id="id">
     <h1 :class="[ darkTitle ? 'dark-title' : 'light-title' ]" class="mb-5">{{ title }}</h1>
     <main class="d-flex">
-      <div v-for="(content, index) in contentArray" :key="index" :class="isUrl(content) ? 'is-img' : 'is-arcticle'">
+      <div v-for="(content, index) in contentArray" :key="index" :class="isUrl(content) ? 'is-img' : 'is-article'">
         <img v-if="isUrl(content)" :src="content" alt="ilustrative-image">
         <article v-else :class="[ darkTitle ? 'dark-body-text' : 'light-body-text' ]">
           {{ content }}
@@ -63,7 +63,7 @@ onMounted(() => {
     display: flex;
     align-items: center;
   }
-  .is-arcticle article {
+  .is-article article {
     font-size: 1rem;
     text-align: justify;
     display: flex;
@@ -83,7 +83,7 @@ onMounted(() => {
   @media (max-width: 576px) {
     main.d-flex {
       flex-direction: column;
-      div.is-arcticle {
+      div.is-article {
         margin-bottom: 10px;
       }
     }

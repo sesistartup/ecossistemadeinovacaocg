@@ -1,5 +1,4 @@
 <template>
-<!-- TODO: fix banner size out of tv screen -->
   <figure class="banner">
     <img :src="path" :alt="imgAlt">
     <slot />
@@ -8,12 +7,23 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted } from 'vue';
 
-  const props = defineProps<{
-    path: string,
-    figcaption: string,
-    imgAlt: string,
-  }>()
+  const props = defineProps({
+    path: String,
+    figcaption: String,
+    imgAlt: String,
+    maxHeight: {
+      type: String,
+      required: false,
+      default: 'unset'
+    }
+  })
+
+  onMounted(() => {
+    const imgBanner: HTMLElement = document.querySelector('figure.banner > img')!
+    imgBanner.style.maxHeight = props.maxHeight
+  })
 </script>
 
 <style scoped lang="scss">
