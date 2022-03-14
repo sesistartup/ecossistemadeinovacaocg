@@ -52,11 +52,11 @@
 }
 @font-face {
   font-family: 'Gotham-Book';
-  src: url(src/assets/fonts/Gotham\ Book.otf);
+  src: url(/src/assets/fonts/Gotham\ Book.otf);
 }
 @font-face {
   font-family: 'Lulu-Bold';
-  src: url(src/assets/fonts/FontsFree-Net-Lulo-Clean-W01-One-Bold.ttf);
+  src: url(/src/assets/fonts/FontsFree-Net-Lulo-Clean-W01-One-Bold.ttf);
 }
 .dark-title, .light-title {
   font-family: 'Lulu-Bold';
@@ -85,5 +85,18 @@
 }
 .green-btn:hover {
   background-color: aquamarine;
+}
+.ghp { // general horizontal padding
+  padding: 0 150px !important;
+}
+@media (max-width: 991px) {
+  .ghp {
+    padding: 0 100px !important;
+  }
+}
+@media (max-width: 768px) {
+  .ghp {
+    padding: 0 50px !important;
+  }
 }
 </style>

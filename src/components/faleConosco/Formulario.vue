@@ -1,5 +1,5 @@
 <template>
-  <form action="submit" class="fale-conosco" @submit.prevent="comunicacaoStore.sendFaleConosco(contactForm.nome, contactForm.emailCorporativo, contactForm.telefone, contactForm.empresa, contactForm.cargo, contactForm.mensagem)">
+  <form action="submit" class="fale-conosco ghp" @submit.prevent="comunicacaoStore.sendFaleConosco(contactForm.nome, contactForm.emailCorporativo, contactForm.telefone, contactForm.empresa, contactForm.cargo, contactForm.mensagem)">
     <input class="form-control" v-model="contactForm.nome" type="text" name="person-name" id="name-input" placeholder="Nome">
     <input class="half-size form-control" v-model="contactForm.emailCorporativo" type="text" name="corporate-email" id="email-input" placeholder="E-mail corporativo">
     <input class="half-size form-control" v-model="contactForm.telefone" type="tel" name="phone" id="phone" placeholder="Telefone (Cód área + Número)" maxlength="11">
@@ -30,7 +30,8 @@ import { useComunicacaoStore } from '../../stores/comunicacao/store';
 
 <style scoped lang="scss">
   form.fale-conosco {
-    padding: 50px 150px;
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -65,14 +66,8 @@ import { useComunicacaoStore } from '../../stores/comunicacao/store';
       text-align: center;
     }
   }
-  @media (max-width: 991px) {
-    form.fale-conosco {
-      padding: 50px 100px;
-    }
-  }
   @media (max-width: 768px) {
     form.fale-conosco {
-      padding: 50px 50px;
       input.half-size {
         margin-right: 0;
         margin-left: 0;
