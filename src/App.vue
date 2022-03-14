@@ -86,4 +86,17 @@
 .green-btn:hover {
   background-color: aquamarine;
 }
+.ghp { // general horizontal padding
+  padding: 0 150px !important;
+}
+@media (max-width: 991px) {
+  .ghp {
+    padding: 0 100px !important;
+  }
+}
+@media (max-width: 768px) {
+  .ghp {
+    padding: 0 50px !important;
+  }
+}
 </style>

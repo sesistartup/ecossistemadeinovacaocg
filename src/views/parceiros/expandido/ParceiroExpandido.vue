@@ -39,7 +39,6 @@ const dummyPartner = reactive({
 
 const hasLogo = ref(true) // Essa variável de controle supõe que a empresa parceira tem logo.
 
-
 onMounted(() => { // Se algo der errado com a logo, então supoe-se que ela não o possui, e então o texto é exibido
   const logo: HTMLImageElement = document.querySelector('#parceiro-logo')!
   if (!logo.complete) {
@@ -54,12 +53,14 @@ onMounted(() => { // Se algo der errado com a logo, então supoe-se que ela não
     top: 50px;
     align-items: center;
     justify-content: center;
-    padding: 0 150px;
     .box {
       background-color: #fff;
-      // max-height: 365px;
-      height: 365px;
-      width: 300px;
+      max-height: 365px;
+      min-height: 120px;
+      height: 100%;
+      max-width: 300px;
+      min-width: 120px;
+      width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -67,6 +68,33 @@ onMounted(() => { // Se algo der errado com a logo, então supoe-se que ela não
       h1.dark-title {
         text-align: center;
         font-size: 1.5rem;
+      }
+    }
+  }
+  @media (max-width: 991px) {
+    .partner-logo-container {
+      h1.dark-title {
+        font-size: 1rem !important;
+      }
+    }
+  }
+  @media (max-width: 576px) {
+    .partner-logo-container {
+      .box {
+        max-width: 200px;
+        max-height: 265px;
+        min-height: 20px;
+        min-width: 20px;
+      }
+      h1.dark-title {
+        font-size: 0.5rem !important;
+      }
+    }
+  }
+  @media (max-width: 400px) {
+    .partner-logo-container {
+      .box {
+        max-width: 100px;
       }
     }
   }

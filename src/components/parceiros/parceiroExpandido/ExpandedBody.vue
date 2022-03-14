@@ -1,5 +1,5 @@
 <template>
-  <section class="partner-body">
+  <section class="partner-body ghp">
     <span class="dark-title">PARCEIRO DO ECOSSISTEMA</span>
     <main>
       <h1 class="dark-title">{{ partnerName }}</h1>
@@ -10,7 +10,7 @@
     <h2 class="dark-title">
       {{ subTitle }}
     </h2>
-    <article class="dark-body-text">
+    <article class="dark-body-text second-paragraph">
       {{ secondParagraph }}
     </article>
   </section>
@@ -41,13 +41,11 @@ const props = defineProps({
 
 <style scoped lang="scss">
   section.partner-body {
-    padding: 0 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: #f6f6f6;
-    margin-bottom: 3rem;
     span {
       color: gray;
       margin-top: 4rem;
@@ -63,12 +61,41 @@ const props = defineProps({
         margin-bottom: 2rem;
       }
     }
+    article.second-paragraph {
+      padding-bottom: 3rem;
+    }
     h2[class="dark-title"] {
       margin-right: auto;
     }
     .dark-body-text {
       font-size: 1rem;
       text-align: justify;
+    }
+  }
+  @media (max-width: 991px) {
+    section.partner-body {
+      span {
+        font-size: 1rem;
+      }
+      main {
+        h1 {
+          font-size: 1.5rem;
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+  @media (max-width: 576px) {
+    section.partner-body {
+      span {
+        font-size: 0.7rem;
+      }
+      main {
+        h1 {
+          font-size: 1.2rem;
+          margin-top: 1rem;
+        }
+      }
     }
   }
 </style>
