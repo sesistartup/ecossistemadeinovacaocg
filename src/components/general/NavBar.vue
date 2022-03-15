@@ -47,7 +47,7 @@ const maisInfos = reactive([
   },
   {
     title: 'AGENDA',
-    path: '/agenda'
+    path: '/eventos'
   },
   {
     title: 'FALE CONOSCO',
