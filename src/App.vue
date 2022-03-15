@@ -99,4 +99,9 @@
     padding: 0 50px !important;
   }
 }
+@media (max-width: 576px) {
+  .ghp {
+    padding: 0 15px !important;
+  }
+}
 </style>
