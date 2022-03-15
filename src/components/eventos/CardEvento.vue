@@ -1,5 +1,5 @@
 <template>
-  <nav class="card-evento boring-gray-border">
+  <div class="card-evento boring-gray-border">
     <div class="img-container">
       <img :src="image" alt="event-image" v-if="hasImage">
       <span v-else class="dark-body-text">{{ nomeEvento }}</span>
@@ -9,7 +9,7 @@
       <time class="dark-body-text">{{ dataEvento }}</time>
       <address class="dark-body-text">{{ enderecoEvento }}</address>
     </div>
-  </nav>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -32,7 +32,7 @@
       font-size: 1rem;
     }
     .img-container {
-      height: 60%;
+      height: 65%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -42,7 +42,9 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      height: 40%;
+      justify-content: center;
+      height: 35%;
+      padding: 10px;
 
       h1 {
         white-space: nowrap;
@@ -65,6 +67,33 @@
       address {
         background-image: url('/src/assets/eventos/pin_icon.png')
       }
+    }
+  }
+  @media (max-width: 1230px) {
+    .card-evento {
+      .dark-body-text {
+        font-size: 1rem;
+      }
+      .infos-container {
+        h1 {
+          font-size: 1rem;
+        }
+        time.dark-body-text, address.dark-body-text {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+  @media (max-width: 1200px) {
+    .card-evento {
+      margin: 10px auto !important;
+    }
+  }
+  @media (max-width: 576px) {
+    .card-evento {
+      height: 350px;
+      max-width: 250px;
+      width: 100%;
     }
   }
 </style>
