@@ -42,7 +42,6 @@
 </template>
 
 <script setup lang="ts">
-  import { onMounted } from 'vue';
 import GeneralBtn from '../buttons/GeneralBtn.vue';
   const props = defineProps<{
     carouselData: {

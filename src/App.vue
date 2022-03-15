@@ -89,6 +89,10 @@
 .ghp { // general horizontal padding
   padding: 0 150px !important;
 }
+.boring-gray-border {
+  border-radius: 0 !important;
+  border: 3px solid lightgray !important;
+}
 @media (max-width: 991px) {
   .ghp {
     padding: 0 100px !important;
