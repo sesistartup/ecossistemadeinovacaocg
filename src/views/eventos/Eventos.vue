@@ -16,6 +16,13 @@
   </div>
   </Banner>
   <Destaques />
+  <CardEvento 
+    :hasImage="false"
+    image="kkk"
+    nomeEvento="Evento 01"
+    dataEvento="01/01/2023"
+    enderecoEvento="Acapulco, FL"
+  />
   <FooterComponent />
 </template>
 
@@ -24,6 +31,7 @@ import NavBar from '../../components/general/NavBar.vue';
 import Banner from '../../components/general/Banner.vue';
 import Destaques from '../../components/eventos/Destaques.vue';
 import FooterComponent from '../../components/general/FooterComponent.vue';
+import CardEvento from '../../components/eventos/CardEvento.vue';
 </script>
 
 <style scoped lang="scss">
