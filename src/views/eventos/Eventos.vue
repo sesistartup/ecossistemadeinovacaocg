@@ -15,12 +15,14 @@
     
   </div>
   </Banner>
+  <Destaques />
   <FooterComponent />
 </template>
 
 <script setup lang="ts">
 import NavBar from '../../components/general/NavBar.vue';
 import Banner from '../../components/general/Banner.vue';
+import Destaques from '../../components/eventos/Destaques.vue';
 import FooterComponent from '../../components/general/FooterComponent.vue';
 </script>
 
