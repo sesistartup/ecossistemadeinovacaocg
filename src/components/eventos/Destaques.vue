@@ -52,6 +52,7 @@ const dummyCarouselData = reactive([
       font-size: 1.5rem;
     }
     padding-top: 50px !important;
+    padding-bottom: 50px !important;
   }
   @media (max-width: 991px) {
     section.destaques {
