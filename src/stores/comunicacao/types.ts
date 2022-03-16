@@ -20,14 +20,14 @@ export class faleConosco implements faleConoscoInterface {
   };
 }
 
-export const validateInput = (nome: string, ec: string, tel: string, emp: string, cargo: string, msg: string): TypeError | faleConosco => {
-  if (!nome
-    || !ec 
-    || !tel 
-    || !emp
-    || !cargo
-    || !msg) {
-    return new TypeError("Por favor, confira os dados e tente novamente");
-  };
-  return new faleConosco(nome, ec, tel, emp, cargo, msg) ;
+export const validateInput = ({nome, emailCorporativo, telefone, empresa, cargo, mensagem}: faleConoscoInterface): TypeError | faleConosco => {
+  // if (!nome
+  //   || !ec 
+  //   || !tel 
+  //   || !emp
+  //   || !cargo
+  //   || !msg) {
+  //   return new TypeError("Por favor, confira os dados e tente novamente");
+  // };
+  return new faleConosco(nome, emailCorporativo, telefone, empresa, cargo, mensagem) ;
 }

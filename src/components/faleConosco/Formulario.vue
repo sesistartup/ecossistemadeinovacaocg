@@ -1,11 +1,11 @@
 <template>
   <form action="submit" class="fale-conosco ghp" @submit.prevent="comunicacaoStore.sendFaleConosco(contactForm.nome, contactForm.emailCorporativo, contactForm.telefone, contactForm.empresa, contactForm.cargo, contactForm.mensagem)">
-    <input class="form-control" v-model="contactForm.nome" type="text" name="person-name" id="name-input" placeholder="Nome">
-    <input class="half-size form-control" v-model="contactForm.emailCorporativo" type="text" name="corporate-email" id="email-input" placeholder="E-mail corporativo">
-    <input class="half-size form-control" v-model="contactForm.telefone" type="tel" name="phone" id="phone" placeholder="Telefone (Cód área + Número)" maxlength="11">
-    <input class="half-size form-control" v-model="contactForm.empresa" type="text" name="company" id="company-input" placeholder="Empresa">
-    <input class="half-size form-control" v-model="contactForm.cargo" type="text" name="job-position" id="cargo-input" placeholder="Cargo">
-    <textarea class="form-control" v-model="contactForm.mensagem" name="message" id="message" cols="30" rows="10" placeholder="Mensagem"></textarea>
+    <input class="form-control boring-gray-border" v-model="contactForm.nome" type="text" name="person-name" id="name-input" placeholder="Nome">
+    <input class="half-size form-control boring-gray-border" v-model="contactForm.emailCorporativo" type="text" name="corporate-email" id="email-input" placeholder="E-mail corporativo">
+    <input class="half-size form-control boring-gray-border" v-model="contactForm.telefone" type="tel" name="phone" id="phone" placeholder="Telefone (Cód área + Número)" maxlength="11">
+    <input class="half-size form-control boring-gray-border" v-model="contactForm.empresa" type="text" name="company" id="company-input" placeholder="Empresa">
+    <input class="half-size form-control boring-gray-border" v-model="contactForm.cargo" type="text" name="job-position" id="cargo-input" placeholder="Cargo">
+    <textarea class="form-control boring-gray-border" v-model="contactForm.mensagem" name="message" id="message" cols="30" rows="10" placeholder="Mensagem"></textarea>
     <button type="submit" class="green-btn">ENVIAR</button>
   </form>
 </template>
@@ -49,8 +49,6 @@ import { useComunicacaoStore } from '../../stores/comunicacao/store';
     .form-control {
       margin-top: 10px;
       height: 50px;
-      border-radius: 0;
-      border: 3px solid lightgray;
     }
     textarea[class="form-control"] {
       min-height: 300px;
