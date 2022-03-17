@@ -14,14 +14,40 @@
         </p>
       </div>
     </Banner>
+    <GeneralContainer 
+      title="A NOSSA HISTÓRIA"
+      :darkTitle="true"
+      :hasKnowMoreBtn="false"
+      :contentArray="ourStoryContentArray"
+      bgColor="#f6f6f6"
+      id="our-story"
+    />
+    <GeneralContainer 
+      title="MAIS SOBRE NÓS"
+      :darkTitle="true"
+      :hasKnowMoreBtn="false"
+      :contentArray="moreAboutUs"
+      bgColor="#fff"
+      id="more-about-us"
+    />
   </section>
 
   <FooterComponent />
 </template>
 
 <script setup lang="ts">
+import { reactive } from 'vue';
 import Banner from '../../components/general/Banner.vue';
+import GeneralContainer from '../../components/general/GeneralContainer.vue';
 
+const ourStoryContentArray = reactive([
+  'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam exercitationem, ea mollitia laudantium laborum qui aut est perferendis nisi rem nobis deleniti consequatur impedit unde ullam a sint provident omnis?',
+  '/src/assets/quem-somos/our_story.png'
+])
+const moreAboutUs = reactive([
+  '/src/assets/quem-somos/more_about_us.png',
+  'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam exercitationem, ea mollitia laudantium laborum qui aut est perferendis nisi rem nobis deleniti consequatur impedit unde ullam a sint provident omnis?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam exercitationem, ea mollitia laudantium laborum qui aut est perferendis nisi rem nobis deleniti consequatur impedit unde ullam a sint provident omnis?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam exercitationem, ea mollitia laudantium laborum qui aut est perferendis nisi rem nobis deleniti consequatur impedit unde ullam a sint provident omnis?'
+])
 </script>
 
 <style scoped lang="scss">

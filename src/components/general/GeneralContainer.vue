@@ -1,6 +1,6 @@
 <!-- este componente é um container de prósito geral segmentado por colunas que recebe título, imagem (ou não) e textos. -->
 <template>
-  <section class="container-fluid general-container" :id="id">
+  <section class="container-fluid general-container ghp" :id="id">
     <h1 :class="[ darkTitle ? 'dark-title' : 'light-title' ]" class="mb-5">{{ title }}</h1>
     <main class="d-flex">
       <div v-for="(content, index) in contentArray" :key="index" :class="isUrl(content) ? 'is-img' : 'is-article'">
@@ -51,7 +51,8 @@ onMounted(() => {
 
 <style scoped lang="scss">
   section.general-container {
-    padding: 40px 200px !important;
+    padding-top: 40px !important;
+    padding-bottom: 40px !important; 
   }
   main.d-flex > div {
     flex: 1 1 0;
@@ -69,18 +70,33 @@ onMounted(() => {
     display: flex;
     flex-direction: column;
     margin: 0 15px;
+    max-height: 280px;
+    overflow-y: auto;
+    padding-right: 10px;
   }
   @media (max-width: 991px) {
-    section.general-container {
-      padding: 40px 100px !important;
+    .is-article article {
+      max-height: 250px;
     }
   }
   @media (max-width: 767px) {
     section.general-container {
-      padding: 20px 50px !important;
+      padding-top: 20px !important;
+      padding-bottom: 20px !important; 
+      h1 {
+        font-size: 1.2rem;
+      }
+    }
+    .is-article article {
+      max-height: 200px;
     }
   }
   @media (max-width: 576px) {
+    section.general-container {
+      h1 {
+        font-size: 1rem;
+      }
+    }
     main.d-flex {
       flex-direction: column;
       div.is-article {

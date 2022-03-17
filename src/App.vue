@@ -60,7 +60,7 @@
 }
 .dark-title, .light-title {
   font-family: 'Lulu-Bold';
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 .light-title {
   color: #fff
