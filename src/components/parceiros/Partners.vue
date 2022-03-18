@@ -1,5 +1,5 @@
 <template>
-  <section class="container-fluid partners-container">
+  <section class="container-fluid partners-container ghp">
     <h1 class="dark-title">EMPRESAS PARCEIRAS</h1>
     <main>
       <div id="partnersCarousel" class="carousel slide carousel-dark" data-bs-ride="carousel" pause="true">
@@ -30,15 +30,25 @@
 
 <style scoped lang="scss">
   section.partners-container {
-    padding: 40px 200px !important;
+    // padding: 40px 200px !important;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .carousel-item {
     // display: flex;
     // justify-content: center;
     // align-content: center;
     img {
-      width: 300px !important;
+      min-width: 240px !important;
       margin: auto;
+      max-width: 500px;
     }
   }
+  // @media (max-width: 576px) {
+  //   section.partners-container {
+  //     padding: 0 !important;
+  //   }
+  // }
 </style>

@@ -3,7 +3,7 @@
     <header>
       <h1 class="dark-title">TÍTULO DA SEÇÃO</h1>
     </header>
-    <nav v-for="(cardPage, index) in dummyCardsPages">
+    <!-- <nav v-for="(cardPage, index) in dummyCardsPages">
       <div class="container-fluid h-100" v-if="index === selectedPage">
         <div class="row">
           <div class="col-12 col-md-6 col-xl-4" v-for="(card, index) in cardPage" :key="index">
@@ -18,13 +18,40 @@
           </div>
         </div>
       </div>
+    </nav> -->
+    <nav v-for="(container, containerIndex) in dummyContainer" :key="containerIndex">
+      <div class="container-fluid h-100">
+        <div class="row">
+          <div class="col-12 col-md-6 col-xl-4" v-for="(card, index) in container" :key="index">
+            <CardEvento
+              :hasImage="card.hasImage"
+              :image="card.image"
+              :nomeEvento="card.nomeEvento"
+              :dataEvento="card.dataEvento"
+              :enderecoEvento="card.enderecoEvento"
+              :class="setSelfMargin(index)"
+            />
+          </div>
+        </div>
+      </div>
     </nav>
     <footer>
-      <button type="button" @click.prevent="setSelectedPage(selectedPage - 1)" class="carousel-control-prev-icon"/>
+      <!-- <button type="button" @click.prevent="setSelectedPage(selectedPage - 1)" class="carousel-control-prev-icon"/>
       <div class="box">
         <button type="button" v-for="(indicator, index) in indicators" :key="indicator" class="indicator" :class="{'active': selectedPage === index}" @click.prevent="setSelectedPage(index)"/>
       </div>
-      <button type="button" @click.prevent="setSelectedPage(selectedPage + 1)" class="carousel-control-next-icon"/>
+      <button type="button" @click.prevent="setSelectedPage(selectedPage + 1)" class="carousel-control-next-icon"/> -->
+      <GeneralBtn 
+        btnText="VER MAIS"
+        :isExternalLink="false"
+        link="#"
+        bgColor="#e78f38"
+        width="100px"
+        textColor="#fff"
+        height="40px"
+        id="know_more"
+        @click="addEventsToView()"
+      />
     </footer>
   </section>
 </template>
@@ -32,6 +59,7 @@
 <script setup lang="ts">
 import { reactive, ref } from 'vue';
 import CardEvento from './CardEvento.vue';
+import GeneralBtn from '../buttons/GeneralBtn.vue';
 
 const selectedPage = ref(0)
 const indicators = ref(3)
@@ -106,6 +134,31 @@ const dummyCardsPages = reactive([
     }
   ]
 ])
+const dummyContainer = reactive([
+  [
+    {
+      hasImage: false,
+      image: 'opa',
+      nomeEvento: "Evento 01",
+      dataEvento: "11/11/2023",
+      enderecoEvento: "Quadrado das Sungas, WTF",
+    },
+    {
+      hasImage: false,
+      image: 'opa',
+      nomeEvento: "Evento 01",
+      dataEvento: "11/11/2023",
+      enderecoEvento: "Losango das Regatas, WTF",
+    },
+    {
+      hasImage: false,
+      image: 'opa',
+      nomeEvento: "Evento abc",
+      dataEvento: "27/11/2023",
+      enderecoEvento: "Triângulo das Bermudas, WTF",
+    }
+  ]
+])
 const setSelfMargin = (num: number) => {
   if (num === 1) return 'm-auto'
   return num === 0 ? 'mr-auto' : 'ml-auto'
@@ -119,6 +172,31 @@ const setSelectedPage = (page: number) => {
   } else {
     selectedPage.value = page
   }
+}
+const addEventsToView = () => {
+  dummyContainer.push([
+    {
+      hasImage: true,
+      image: '/src/assets/home/carousel/embrapa.png',
+      nomeEvento: "Evento adicionado",
+      dataEvento: "05/07/2024",
+      enderecoEvento: "Acapulco",
+    },
+    {
+      hasImage: false,
+      image: 'opa',
+      nomeEvento: "Evento 01",
+      dataEvento: "11/11/2023",
+      enderecoEvento: "Losango das Regatas, WTF",
+    },
+    {
+      hasImage: false,
+      image: 'opa',
+      nomeEvento: "Evento abc",
+      dataEvento: "27/11/2023",
+      enderecoEvento: "Triângulo das Bermudas, WTF",
+    }
+  ])
 }
 </script>
 
@@ -134,6 +212,7 @@ const setSelectedPage = (page: number) => {
       .container-fluid {
         padding: 0;
         height: 500px;
+        margin-bottom: 2rem;
       }
     }
     footer {
