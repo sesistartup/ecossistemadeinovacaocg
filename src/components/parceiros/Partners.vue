@@ -1,5 +1,5 @@
-<template>
-  <section class="container-fluid partners-container">
+<template> <!-- este é o componente que vai na tela home, o carrosel de empresas parceiras -->
+  <section class="container-fluid partners-container ghp">
     <h1 class="dark-title">EMPRESAS PARCEIRAS</h1>
     <main>
       <div id="partnersCarousel" class="carousel slide carousel-dark" data-bs-ride="carousel" pause="true">
@@ -29,16 +29,17 @@
 </script>
 
 <style scoped lang="scss">
-  section.partners-container {
-    padding: 40px 200px !important;
-  }
   .carousel-item {
-    // display: flex;
-    // justify-content: center;
-    // align-content: center;
     img {
       width: 300px !important;
       margin: auto;
+    }
+  }
+  @media (max-width: 768px) {
+    section.partners-container {
+      h1 {
+        font-size: 1.2rem;
+      }
     }
   }
 </style>

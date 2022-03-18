@@ -12,7 +12,7 @@ export const useComunicacaoStore = defineStore('comunicacaoStore', {
   actions: {
     async sendFaleConosco(nome: string, emailCorporativo: string, telefone: string, empresa: string, cargo: string, mensagem: string) {
       try {
-        const faleConoscoInput = validateInput(nome, emailCorporativo, telefone, empresa, cargo, mensagem)
+        const faleConoscoInput = validateInput({nome, emailCorporativo, telefone, empresa, cargo, mensagem})
         console.log(faleConoscoInput)
       } catch (error) {
         console.log(error)

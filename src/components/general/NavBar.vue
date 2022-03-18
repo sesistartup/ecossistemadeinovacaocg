@@ -47,7 +47,7 @@ const maisInfos = reactive([
   },
   {
     title: 'AGENDA',
-    path: '/agenda'
+    path: '/eventos'
   },
   {
     title: 'FALE CONOSCO',
@@ -71,9 +71,13 @@ onMounted(() => {
 </script>
 
 <style scoped lang="scss">
+nav.navbar {
+  section.container-links {
+    font-size: 1.2rem;
+  }
+}
 .container-fluid {
-  justify-content: unset;
-  flex-wrap: nowrap;
+  flex-wrap: nowrap !important;
 }
 .container-links {
   display: flex;
@@ -115,13 +119,17 @@ a {
     margin: 5px 10px;
     padding: 0;
   }
-  .dark-title {
-    font-size: 1rem;
+  nav.navbar {
+    section.container-links {
+      font-size: 1rem;
+    }
   }
 }
 @media (max-width: 767px) {
-  .dark-title {
-    font-size: 0.7em;
+  nav.navbar {
+    section.container-links {
+      font-size: 0.7rem;
+    }
   }
 }
 @media (max-width: 485px) {
