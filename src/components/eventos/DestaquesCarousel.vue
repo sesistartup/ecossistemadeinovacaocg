@@ -96,6 +96,7 @@ import GeneralBtn from '../buttons/GeneralBtn.vue';
         opacity: .5;
         transition: opacity .6s ease;
         border-radius: 15px;
+        z-index: 5;
       }
     }
     .indicators-container {
