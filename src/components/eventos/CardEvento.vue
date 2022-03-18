@@ -36,6 +36,9 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      img {
+        width: -webkit-fill-available;
+      }
     }
     .infos-container {
       border-top: 3px solid lightgray;
