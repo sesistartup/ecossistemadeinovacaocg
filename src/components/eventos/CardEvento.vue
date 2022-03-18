@@ -65,10 +65,10 @@
         margin: 5px 0;
       }
       time {
-        background-image: url('/src/assets/eventos/calendar_icon.png')
+        background-image: url('/eventos/calendar_icon.png')
       }
       address {
-        background-image: url('/src/assets/eventos/pin_icon.png')
+        background-image: url('/eventos/pin_icon.png')
       }
     }
   }

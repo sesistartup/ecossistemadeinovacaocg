@@ -1,16 +1,16 @@
 <template>
   <footer class="container-fluid">
     <div class="img-container">
-      <img src="/src/assets/logo_with_text.png" alt="white_logo">
+      <img src="/logo_with_text.png" alt="white_logo">
       <div class="social d-lg-none">
         <a href="">
-          <img src="/src/assets/linkedin_icon.png" alt="linkedin">
+          <img src="/linkedin_icon.png" alt="linkedin">
         </a>
         <a href="">
-          <img src="/src/assets/wpp_icon.png" alt="whatsapp">
+          <img src="/wpp_icon.png" alt="whatsapp">
         </a>
         <a href="">
-          <img src="/src/assets/insta_icon.png" alt="instagram">
+          <img src="/insta_icon.png" alt="instagram">
         </a>
       </div>
     </div>
@@ -27,13 +27,13 @@
         </li>
         <li>
           <a href="">
-            <img src="/src/assets/linkedin_icon.png" alt="linkedin">
+            <img src="/linkedin_icon.png" alt="linkedin">
           </a>
           <a href="">
-            <img src="/src/assets/wpp_icon.png" alt="whatsapp">
+            <img src="/wpp_icon.png" alt="whatsapp">
           </a>
           <a href="">
-            <img src="/src/assets/insta_icon.png" alt="instagram">
+            <img src="/insta_icon.png" alt="instagram">
           </a>
         </li>
       </ul>

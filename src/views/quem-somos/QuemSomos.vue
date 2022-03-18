@@ -2,7 +2,7 @@
   <NavBar :is-transparent="false"/>
   <section class="quem-somos">
     <Banner
-      path="/src/assets/quem-somos/banner.png"
+      path="/quem-somos/banner.png"
       figcaption="about-us"
       img-alt="sobre nós"
     >
@@ -42,10 +42,10 @@ import GeneralContainer from '../../components/general/GeneralContainer.vue';
 
 const ourStoryContentArray = reactive([
   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam exercitationem, ea mollitia laudantium laborum qui aut est perferendis nisi rem nobis deleniti consequatur impedit unde ullam a sint provident omnis?',
-  '/src/assets/quem-somos/our_story.png'
+  '/quem-somos/our_story.png'
 ])
 const moreAboutUs = reactive([
-  '/src/assets/quem-somos/more_about_us.png',
+  '/quem-somos/more_about_us.png',
   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam exercitationem, ea mollitia laudantium laborum qui aut est perferendis nisi rem nobis deleniti consequatur impedit unde ullam a sint provident omnis?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam exercitationem, ea mollitia laudantium laborum qui aut est perferendis nisi rem nobis deleniti consequatur impedit unde ullam a sint provident omnis?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam exercitationem, ea mollitia laudantium laborum qui aut est perferendis nisi rem nobis deleniti consequatur impedit unde ullam a sint provident omnis?'
 ])
 </script>

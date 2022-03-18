@@ -1,12 +1,12 @@
 <template>
   <NavBar :is-transparent="false"/>
   <Banner 
-    path="src/assets/fale-conosco/fale-conosco-banner.png"
+    path="/fale-conosco/fale-conosco-banner.png"
     figcaption="costumer-service"
     img-alt="costumer-service"
   >
     <div class="d-flex h-100">
-      <img src="../../assets/fale-conosco/fale-conosco-icon.png" alt="Fale Conosco">
+      <img src="/fale-conosco/fale-conosco-icon.png" alt="Fale Conosco">
       <h1 class="dark-title">FALE<br>CONOSCO</h1>
     </div>
   </Banner>

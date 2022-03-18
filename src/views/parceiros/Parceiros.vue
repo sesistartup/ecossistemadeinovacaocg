@@ -4,13 +4,13 @@
     :is-transparent="false"
   />
     <Banner
-      path="/src/assets/parceiros/banner.png"
+      path="/parceiros/banner.png"
       figcaption="parceiros do ecossistema"
       imgAlt="ecosystem partners"
       maxHeight="unset"
     >
       <div class="d-flex h-100 position-absolute top-0 ghp">
-        <img src="/src/assets/parceiros/parceiro_icon.png" alt="Fale Conosco">
+        <img src="/parceiros/parceiro_icon.png" alt="Fale Conosco">
         <h1 class="dark-title">PARCEIROS
           <p class="dark-body-text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum rerum esse tempora aspernatur, laudantium, quisquam officia nostrum iure impedit alias neque. Ad dicta reprehenderit perferendis laborum commodi iure assumenda sed?
@@ -41,7 +41,7 @@ import { reactive } from 'vue';
       parceiros: [
         {
           hasLogo: true,
-          logo: '/src/assets/home/carousel/estacio.png',
+          logo: '/home/carousel/estacio.png',
           logoAlt: 'estacio',
           parceiroId: 1
         },
@@ -88,7 +88,7 @@ import { reactive } from 'vue';
       parceiros: [
         {
           hasLogo: true,
-          logo: '/src/assets/home/carousel/estacio.png',
+          logo: '/home/carousel/estacio.png',
           logoAlt: 'estacio',
           parceiroId: 1
         },
@@ -111,7 +111,7 @@ import { reactive } from 'vue';
       parceiros: [
         {
           hasLogo: true,
-          logo: '/src/assets/home/carousel/estacio.png',
+          logo: '/home/carousel/estacio.png',
           logoAlt: 'estacio',
           parceiroId: 1
         },

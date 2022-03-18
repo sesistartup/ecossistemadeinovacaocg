@@ -3,7 +3,7 @@
         :is-transparent="false"
     />
     <Banner
-      path="/src/assets/parceiros/parceiro-expandido/background.png"
+      path="/parceiros/parceiro-expandido/background.png"
       figcaption="graphs"
       img-alt="partner page"
       max-height="352px"

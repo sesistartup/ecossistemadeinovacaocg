@@ -177,7 +177,7 @@ const addEventsToView = () => {
   dummyContainer.push([
     {
       hasImage: true,
-      image: '/src/assets/home/carousel/embrapa.png',
+      image: '/home/carousel/embrapa.png',
       nomeEvento: "Evento adicionado",
       dataEvento: "05/07/2024",
       enderecoEvento: "Acapulco",

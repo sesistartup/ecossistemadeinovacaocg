@@ -113,10 +113,10 @@ import GeneralBtn from '../buttons/GeneralBtn.vue';
     background-size: contain
   }
   .calendar-icon {
-    background-image: url('/src/assets/eventos/calendar_icon.png');
+    background-image: url('/eventos/calendar_icon.png');
   }
   .pin-icon {
-    background-image: url('/src/assets/eventos/pin_icon.png');
+    background-image: url('/eventos/pin_icon.png');
   }
   @media (max-width: 991px) {
     .carousel-inner {
