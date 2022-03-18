@@ -47,10 +47,19 @@ import CardParceiro from './CardParceiro.vue';
       gap: 20px 9%;
     }
   }
-  @media (max-width: 1031px) {
+  @media (max-width: 991px) {
     .container-cards-parceiros {
-      main{
-        column-gap: 5%;
+      header {
+        // margin-top: 0;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    section.container-cards-parceiros {
+      header {
+        h1 {
+          font-size: 1.2rem;
+        }
       }
     }
   }
@@ -58,6 +67,13 @@ import CardParceiro from './CardParceiro.vue';
     .container-cards-parceiros {
       main {
         justify-items: center;
+      }
+    }
+    section.container-cards-parceiros {
+      header {
+        h1 {
+          font-size: 1rem;
+        }
       }
     }
   }
