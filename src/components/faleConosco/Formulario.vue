@@ -17,11 +17,25 @@
       <span class="visually-hidden">Loading...</span>
     </div>
   </form>
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#teste">Launch demo modal
+</button>
+<!-- <button type="button" class="btn btn-primary" @click="openModal('modal')">
+  Launch demo modal
+</button> -->
+<ModalComponent
+  :title="modalSettings.title"
+  :message="modalSettings.message"
+  :status="modalSettings.status"
+  :modal-id="modalSettings.id"
+/>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { reactive, ref } from 'vue';
 import { useComunicacaoStore } from '../../stores/comunicacao/store';
+import ModalComponent from '../general/ModalComponent.vue'
+import { Modal } from 'bootstrap';
 
   const comunicacaoStore = useComunicacaoStore();
   const sendingEmail = ref(false);
@@ -37,11 +51,32 @@ import { useComunicacaoStore } from '../../stores/comunicacao/store';
   const sendEmail = async () => {
     sendingEmail.value = true
     sendingEmail.value = await comunicacaoStore.sendFaleConosco(contactForm.value.nome, contactForm.value.emailCorporativo, contactForm.value.telefone, contactForm.value.empresa, contactForm.value.cargo, contactForm.value.setorId, contactForm.value.mensagem)
+    const res = comunicacaoStore.faleConoscoResponse.getResponse()
+    if (res.code === 200) {
+      openModal('faleConoscoRes', 'Sucesso', res.message, 'success')
+    } else {
+      openModal('faleConoscoRes', 'Falha', res.message, 'warning')
+    }
   }
   const evalNumberInput = (e: KeyboardEvent) => {
     if (isNaN(parseInt(e.key))) {
       contactForm.value.telefone = contactForm.value.telefone.slice(0, contactForm.value.telefone.indexOf(e.key))
     }
+  }
+  const modalSettings = reactive({
+    title: '',
+    message: '',
+    status: '',
+    id: 'faleConoscoRes'
+  })
+  const openModal = (modalId: string, mt: string, mm: string, ms: string) => {
+    modalSettings.id = modalId
+    modalSettings.title = mt
+    modalSettings.message = mm
+    modalSettings.status = ms
+    const modalDOM: any = document.querySelector('#' + modalId)
+    const bsModal = Modal.getOrCreateInstance(modalDOM)!
+    bsModal.show()
   }
 </script>
 

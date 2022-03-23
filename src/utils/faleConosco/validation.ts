@@ -17,7 +17,7 @@ const empresaIsValid = (e: string) => {
   return true;
 }
 const cargoIsValid = (c: string) => {
-  if (!c || c.length < 5) return false;
+  if (!c || c.length < 3) return false;
   return true;
 }
 const setorIdIsValid = (s: number) => {

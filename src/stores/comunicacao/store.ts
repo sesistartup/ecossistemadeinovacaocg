@@ -21,12 +21,14 @@ export const useComunicacaoStore = defineStore('comunicacaoStore', {
           faleConoscoInput
           )
           this.faleConoscoResponse.putResponse(response.data.codigo, response.data.dado, response.data.mensagem);
+        } else {
+          this.faleConoscoResponse.putError(223, faleConoscoInput.message);
         }
       } catch (error) {
         if (error instanceof TypeError) {
           this.faleConoscoResponse.putError(222, error.message);
         } else {
-          this.faleConoscoResponse.putError(666, 'Entre em contato com a Startup do SESI');
+          this.faleConoscoResponse.putError(661, 'Entre em contato com a Startup do SESI');
         }
       }
       return false; // retorno que indica que a resposta chegou

@@ -17,7 +17,6 @@
 <script setup lang="ts">
 import Banner from '../../components/general/Banner.vue';
 import Formulario from '../../components/faleConosco/Formulario.vue';
-
 </script>
 
 <style scoped lang="scss">

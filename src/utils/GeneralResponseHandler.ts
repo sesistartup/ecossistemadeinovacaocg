@@ -24,4 +24,11 @@ export class GeneralResponseHandler implements ResponseInterface {
     this.code = c;
     this.message = m
   }
+  getResponse(): ResponseInterface {
+    return {
+      code: this.code,
+      dado: this.dado,
+      message: this.message
+    }
+  }
 }
