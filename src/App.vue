@@ -93,6 +93,12 @@
   border-radius: 0 !important;
   border: 3px solid lightgray !important;
 }
+.ml-auto {
+  margin-left: auto
+}
+.mr-auto {
+  margin-right: auto;
+}
 @media (max-width: 991px) {
   .ghp {
     padding: 0 100px !important;

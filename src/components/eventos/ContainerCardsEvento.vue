@@ -255,12 +255,6 @@ const addEventsToView = () => {
       }
     }
   }
-  .ml-auto {
-    margin-left: auto
-  }
-  .mr-auto {
-    margin-right: auto;
-  }
   @media (max-width: 991px) {
     section#container-cards-evento {
       header {
