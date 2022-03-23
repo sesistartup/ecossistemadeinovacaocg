@@ -6,27 +6,27 @@
 				path="/noticias/banner.png"
 				figcaption="workspace_image"
 				img-alt="workspace_image"
-				pixels-bg-height="710px"
 			>
-				<div class="banner-noticia-content">
+				<div class="banner-noticia-content ghp">
 					<img src="/noticias/icone-noticia.png" alt="icon">
 					<div>
-						<h1 class="dark-title">Noticias</h1>
+						<h1 class="dark-title">Notícias</h1>
 						<p class="dark-body-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia saepe ex alias consectetur, nulla, in neque iure praesentium, modi eveniet consequuntur quaerat dolorum officiis vel. Dolores nihil quo eveniet vel.</p>
 					</div>
 				</div>
 			</Banner>
 
-			<div class="noticias-content">
-				<h1>ÚLTIMAS NOTICIAS</h1>
+			<div class="noticias-content ghp">
+				<h1 class="dark-title">ÚLTIMAS NOTICIAS</h1>
 
-				<div class="card-noticia-container">
-					<CardNoticia />
-					<CardNoticia />
-					<CardNoticia />
-					<CardNoticia />
-					<CardNoticia />
-					<CardNoticia />
+				<div class="card-noticia-container dark-body-text"> 
+          <!-- FIXME: criar componente container e automatizar geração de cards -->
+					<CardNoticia @click="$router.push({ name: 'NoticiaExpandida', params: { noticiaId: 1 }})"/>
+					<CardNoticia @click="$router.push({ name: 'NoticiaExpandida', params: { noticiaId: 2 }})"/>
+					<CardNoticia @click="$router.push({ name: 'NoticiaExpandida', params: { noticiaId: 3 }})"/>
+					<CardNoticia @click="$router.push({ name: 'NoticiaExpandida', params: { noticiaId: 4 }})"/>
+					<CardNoticia @click="$router.push({ name: 'NoticiaExpandida', params: { noticiaId: 5 }})"/>
+					<CardNoticia @click="$router.push({ name: 'NoticiaExpandida', params: { noticiaId: 6 }})"/>
 				</div>
 			</div>
 		</main>
@@ -47,8 +47,8 @@ section.container-fluid {
 
 .noticias-content {
 	width: 100%;
-	max-width: 1200px;
-	padding: 0 24px;
+	/* max-width: 1200px; */
+	/* padding: 0 24px; */
 	margin: 0 auto;
 	margin-top: 48px;
 
@@ -60,8 +60,8 @@ section.container-fluid {
 
 .card-noticia-container {
 	width: 100%;
-	max-width: 1000px;
-	margin: 48px auto;
+	/* max-width: 1000px; */
+	/* margin: 48px auto; */
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	gap: 48px 32px;
