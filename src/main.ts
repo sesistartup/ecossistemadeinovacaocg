@@ -8,7 +8,6 @@ import "bootstrap";
 import NavBar from './components/general/NavBar.vue'
 import FooterComponent from './components/general/FooterComponent.vue'
 
-
 const pinia = createPinia()
 const ecossistema = createApp(App)
 
