@@ -3,30 +3,29 @@
 	<section class="container-fluid">
 		<main>
 			<Banner
-				path="/noticias/banner.png"
+				path="/documentos/banner.png"
 				pixels-bg-height="710px"
 			>
-				<div class="banner-documentos-content">
+				<div class="banner-documentos-content ghp">
 					<img src="/documentos/icone-documento.png" alt="icon">
-					<div>
+					<div class="banner-text-container">
 						<h1 class="dark-title">Documentos</h1>
 						<p class="dark-body-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia saepe ex alias consectetur, nulla, in neque iure praesentium, modi eveniet consequuntur quaerat dolorum officiis vel. Dolores nihil quo eveniet vel.</p>
 					</div>
 				</div>
 			</Banner>
 
-			<div class="destaques-content">
-				<h1>Destaques</h1>
-				<!-- pendente -->
+			<div class="destaques-content ghp">
+				<ContainerDestaques />
 			</div>
 
 			<div class="noticias-content">
-				<h1>Documentos</h1>
+				<h1 class="dark-title">Documentos</h1>
 
-				<div class="card-documentos-container">
-					<CardDocumentos title="Pesquisas" iconPath="/documentos/icone-leis.png" />
-					<CardDocumentos title="Editais" iconPath="/documentos/icone-editais.png" />
-					<CardDocumentos title="Leis" iconPath="/documentos/icone-leis.png" />
+				<div class="card-documentos-container ghp">
+					<CardDocumento title="Pesquisas" iconPath="/documentos/lupinha.png" />
+					<CardDocumento title="Editais" iconPath="/documentos/icone-editais.png" />
+					<CardDocumento title="Leis" iconPath="/documentos/icone-leis.png" />
 				</div>
 			</div>
 		</main>
@@ -36,7 +35,8 @@
 
 <script setup lang="ts">
 import Banner from '../../components/general/Banner.vue';
-import CardDocumentos from '../../components/documentos/CardDocumentos.vue';
+import CardDocumento from '../../components/documentos/CardDocumento.vue';
+import ContainerDestaques from '../../components/documentos/ContainerDestaques.vue'
 
 </script>
 
@@ -50,7 +50,6 @@ section.container-fluid {
 	top: 0;
 	width: 100%;
 	height: 100%;
-	padding-left: 64px;
 
 	display: flex;
 	align-items: center;
@@ -67,8 +66,6 @@ section.container-fluid {
 		flex-direction: column;
 		align-items: flex-start;
 
-		width: 400px;
-
 		p {
 			text-align: start;
 			font-size: 12px;
@@ -78,9 +75,8 @@ section.container-fluid {
 
 .destaques-content {
 	width: 100%;
-  margin: 48px 0;
-	padding: 0 32px;
 	margin-bottom: 24px;
+  background-color: #f6f6f6;
 
 	> h1 {
 		font-weight: bold !important;
@@ -91,23 +87,36 @@ section.container-fluid {
 .noticias-content {
 	width: 100%;
   margin: 48px 0;
-	padding: 0 32px;
 
 	> h1 {
 		font-weight: bold !important;
 		text-transform: uppercase;
+    font-size: 1.5rem;
 	}
 }
 
 .card-documentos-container {
-	margin: 24px auto 0;
-
-	width: 100%;
-	max-width: 1000px;
-
-
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 30px;
+	display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+@media (max-width: 1045px) {
+  .card-documentos-container {
+    justify-content: space-around;
+  }
+}
+@media (max-width: 576px) {
+  .banner-documentos-content {
+    img {
+      min-width: 35px;
+    }
+  }
+  .noticias-content {
+    > h1 {
+      font-size: 1.2rem;
+    }
+  }
 }
 </style>

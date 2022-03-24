@@ -2,7 +2,7 @@
   <div class="card-documentos-content">
     <div>
       <img :src="iconPath" />
-      <h1>{{title}}</h1>
+      <h1 class="dark-title">{{title}}</h1>
     </div>
     
 
@@ -13,21 +13,20 @@
 </template>
 
 <script setup lang="ts">
-
-  const documentosProps = defineProps({
-    title: String,
-    iconPath: String,
-  })
-
+  const props = defineProps<{
+    title: string
+    iconPath: string
+  }>()
 </script>
 
 <style lang="scss" scoped>
 .card-documentos-content {
-  width: 100%;
+  width: 325px;
   border: 1px solid black;
   padding: 28px 24px;
   display: flex;
   flex-direction: column;
+  margin: 10px 0;
 
   > div {
     display: flex;
@@ -37,7 +36,7 @@
       margin: 0;
       margin-left: 12px;
       font-weight: bold;
-      font-size: 26px;
+      font-size: 1.2rem;
       text-transform: uppercase;
     }
 
@@ -50,6 +49,8 @@
   > p {
     margin: 20px 0;
     text-align: justify;
+    height: 100%;
+    overflow-y: auto;
   }
 
   > button {
@@ -62,6 +63,18 @@
     font-weight: 600;
     text-transform: uppercase;
     font-size: 14px;
+  }
+}
+@media (max-width: 576px) {
+  .card-documentos-content {
+    width: 200px;
+    height: 250px;
+    > div > h1 {
+      font-size: 0.8rem;
+    }
+    > p {
+      font-size: 0.7rem;
+    }
   }
 }
 </style>
