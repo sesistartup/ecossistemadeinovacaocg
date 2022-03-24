@@ -6,6 +6,7 @@ import ParceiroExpandido from '../views/parceiros/expandido/ParceiroExpandido.vu
 import QuemSomos from '../views/quem-somos/QuemSomos.vue';
 import Eventos from '../views/eventos/Eventos.vue';
 import Noticias from '../views/noticias/Noticias.vue';
+import NoticiaExpandida from '../views/noticias/expandida/NoticiaExpandida.vue';
 import Documentos from '../views/documentos/Documentos.vue';
 
 const routes: RouteRecordRaw[] = [
@@ -43,6 +44,11 @@ const routes: RouteRecordRaw[] = [
 		path: '/noticias',
 		name: 'Noticias',
 		component: Noticias,
+	},
+	{
+		path: '/noticias/:noticiaId',
+		name: 'NoticiaExpandida',
+		component: NoticiaExpandida,
 	},
 	{
 		path: '/documentos',
