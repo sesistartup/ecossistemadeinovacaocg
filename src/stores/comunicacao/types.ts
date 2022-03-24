@@ -21,3 +21,8 @@ export class faleConosco implements faleConoscoInterface {
     [ this.nome, this.emailCorporativo, this.telefone, this.empresa, this.cargo, this.setorId, this.mensagem ] = arguments
   };
 }
+
+export interface SetorInterface {
+  id: number
+  descricao: string
+}
