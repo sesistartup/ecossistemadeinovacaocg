@@ -1,5 +1,5 @@
 <template>
-	<NavBar :is-transparent="true" />
+	<NavBar :is-transparent="false" />
 	<section class="container-fluid">
 		<main>
 			<Banner
@@ -23,9 +23,30 @@
 				<h1 class="dark-title">Documentos</h1>
 
 				<div class="card-documentos-container ghp">
-					<CardDocumento title="Pesquisas" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, labore rerum officia quam ipsum tenetur tempore. Ducimus, non aperiam ratione quasi iste soluta a dolore modi in, fugit perspiciatis voluptates." :has-icon="true" iconPath="/documentos/lupinha.png" />
-					<CardDocumento title="Editais" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, labore rerum officia quam ipsum tenetur tempore. Ducimus, non aperiam ratione quasi iste soluta a dolore modi in, fugit perspiciatis voluptates." :has-icon="true" iconPath="/documentos/icone-editais.png" />
-					<CardDocumento title="Leis" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, labore rerum officia quam ipsum tenetur tempore. Ducimus, non aperiam ratione quasi iste soluta a dolore modi in, fugit perspiciatis voluptates." :has-icon="true" iconPath="/documentos/icone-leis.png" />
+					<CardDocumento 
+            title="Pesquisas"
+            text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, labore rerum officia quam ipsum tenetur tempore. Ducimus, non aperiam ratione quasi iste soluta a dolore modi in, fugit perspiciatis voluptates." 
+            :has-icon="true" 
+            iconPath="/documentos/lupinha.png"
+            :has-download="false"
+            content-to-download="none"
+          />
+					<CardDocumento 
+            title="Editais" 
+            text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, labore rerum officia quam ipsum tenetur tempore. Ducimus, non aperiam ratione quasi iste soluta a dolore modi in, fugit perspiciatis voluptates." 
+            :has-icon="true" 
+            iconPath="/documentos/icone-editais.png"
+            :has-download="false"
+            content-to-download="none"
+          />
+					<CardDocumento 
+            title="Leis" 
+            text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, labore rerum officia quam ipsum tenetur tempore. Ducimus, non aperiam ratione quasi iste soluta a dolore modi in, fugit perspiciatis voluptates." 
+            :has-icon="true" 
+            iconPath="/documentos/icone-leis.png"
+            :has-download="false"
+            content-to-download="none"
+          />
 				</div>
 			</div>
 		</main>
