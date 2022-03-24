@@ -6,27 +6,39 @@
 				path="/noticias/banner.png"
 				figcaption="workspace_image"
 				img-alt="workspace_image"
-				pixels-bg-height="710px"
 			>
-				<div class="banner-noticia-content">
+				<div class="banner-noticia-content ghp">
 					<img src="/noticias/icone-noticia.png" alt="icon">
 					<div>
-						<h1 class="dark-title">Noticias</h1>
+						<h1 class="dark-title">Notícias</h1>
 						<p class="dark-body-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia saepe ex alias consectetur, nulla, in neque iure praesentium, modi eveniet consequuntur quaerat dolorum officiis vel. Dolores nihil quo eveniet vel.</p>
 					</div>
 				</div>
 			</Banner>
 
-			<div class="noticias-content">
-				<h1>ÚLTIMAS NOTICIAS</h1>
+			<div class="noticias-content ghp">
+				<h1 class="dark-title">ÚLTIMAS NOTICIAS</h1>
 
-				<div class="card-noticia-container">
-					<CardNoticia />
-					<CardNoticia />
-					<CardNoticia />
-					<CardNoticia />
-					<CardNoticia />
-					<CardNoticia />
+				<div class="card-noticia-container dark-body-text"> 
+          <!-- FIXME: criar componente container e automatizar geração de cards -->
+					<CardNoticia 
+            :is-relacionada="false"
+            @click="$router.push({ name: 'NoticiaExpandida', params: { noticiaId: 1 }})"/>
+					<CardNoticia 
+            :is-relacionada="false"
+            @click="$router.push({ name: 'NoticiaExpandida', params: { noticiaId: 2 }})"/>
+					<CardNoticia 
+            :is-relacionada="false"
+            @click="$router.push({ name: 'NoticiaExpandida', params: { noticiaId: 3 }})"/>
+					<CardNoticia 
+            :is-relacionada="false"
+            @click="$router.push({ name: 'NoticiaExpandida', params: { noticiaId: 4 }})"/>
+					<CardNoticia 
+            :is-relacionada="false"
+            @click="$router.push({ name: 'NoticiaExpandida', params: { noticiaId: 5 }})"/>
+					<CardNoticia 
+            :is-relacionada="false"
+            @click="$router.push({ name: 'NoticiaExpandida', params: { noticiaId: 6 }})"/>
 				</div>
 			</div>
 		</main>
@@ -47,21 +59,17 @@ section.container-fluid {
 
 .noticias-content {
 	width: 100%;
-	max-width: 1200px;
-	padding: 0 24px;
 	margin: 0 auto;
 	margin-top: 48px;
 
 	> h1 {
 		font-weight: bold;
-		font-size: 32px;
+		font-size: 2rem;
 	}
 }
 
 .card-noticia-container {
 	width: 100%;
-	max-width: 1000px;
-	margin: 48px auto;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	gap: 48px 32px;
@@ -87,6 +95,10 @@ section.container-fluid {
 	display: flex;
 	align-items: center;
 
+  .dark-title {
+    font-size: 2.5rem;
+  }
+
 	> img {
 		width: 10%;
 		min-width: 60px;
@@ -98,13 +110,67 @@ section.container-fluid {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-
-		width: 400px;
+		width: 100%;
+    max-width: 500px;
 
 		p {
 			text-align: start;
-			font-size: 12px;
+			font-size: 1rem;
+      max-height: 100px;
+      height: 100%;
+      overflow-y: auto;
 		}
 	}
 }
+@media (max-width: 1200px) {
+  .banner-noticia-content {
+    .dark-title {
+      font-size: 2rem;
+    }
+    .dark-body-text {
+      font-size: 0.8rem;
+    }
+  }
+}
+  @media (max-width: 991px) {
+  .banner-noticia-content {
+    .dark-title {
+      margin-bottom: 0;
+      font-size: 1.5rem;
+    }
+    > div {
+      max-width: 300px;
+      p {
+        max-height: 60px;
+        margin-bottom: 0;
+      }
+    }
+  }
+  }
+  @media (max-width: 768px) {
+  .banner-noticia-content {
+    .dark-title {
+      font-size: 1rem;
+    }
+    > div {
+      max-width: 200px;
+      p {
+        max-height: 40px;
+      }
+    }
+    .dark-body-text {
+      font-size: 0.7rem;
+    }
+  }
+  }
+  @media (max-width: 576px) {
+    .banner-noticia-content {
+      .dark-title {
+        font-size: 0.8rem;
+      }
+      .dark-body-text {
+        font-size: 0.8rem;
+      }
+    }
+  }
 </style>
