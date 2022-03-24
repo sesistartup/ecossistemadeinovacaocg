@@ -1,11 +1,9 @@
 <template>
   <form action="submit" class="fale-conosco ghp">
-    <input class="half-size form-control boring-gray-border" v-model="contactForm.nome" type="text" name="person-name" id="name-input" placelder="Nome">
+    <input class="half-size form-control boring-gray-border" v-model="contactForm.nome" type="text" name="person-name" id="name-input" placeholder="Nome">
     <select class="half-size form-control form-select boring-gray-border" v-model="contactForm.setorId" aria-label="Default select example">
-      <option selected value="0">Open this select menu</option>
-      <option value="">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
+      <option v-for="(setor, index) in comunicacaoStore.faleConoscoSetores" :key="setor.id" :value="setor.id">{{ setor.descricao }}</option>
+      <option value="0" selected>Selecione um setor</option>
     </select>
     <input class="half-size form-control boring-gray-border" v-model="contactForm.emailCorporativo" type="text" name="corporate-email" id="email-input" placeholder="E-mail corporativo">
     <input class="half-size form-control boring-gray-border" v-model="contactForm.telefone" type="tel" name="phone" id="phone" placeholder="Telefone (Cód área + Número)" maxlength="11" @keyup="evalNumberInput($event)">
@@ -26,7 +24,7 @@
 </template>
 
 <script setup lang="ts">
-import { reactive, ref } from 'vue';
+import { onMounted, reactive, ref } from 'vue';
 import { useComunicacaoStore } from '../../stores/comunicacao/store';
 import ModalComponent from '../general/ModalComponent.vue'
 import { Modal } from 'bootstrap';
@@ -72,6 +70,11 @@ import { Modal } from 'bootstrap';
     const bsModal = Modal.getOrCreateInstance(modalDOM)!
     bsModal.show()
   }
+  const waitingSetores = ref(true)
+  onMounted( async () => {
+    waitingSetores.value = true;
+    waitingSetores.value = await comunicacaoStore.getFaleConoscoSetores();
+  })
 </script>
 
 <style scoped lang="scss">
