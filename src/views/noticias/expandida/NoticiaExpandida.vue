@@ -9,7 +9,7 @@
   >
     <div class="noticia-expandida-banner ghp">
       <img src="/noticias/icone-noticia.png" alt="icon">
-      <div>
+      <div class="text-container">
         <h1 class="dark-title">Notícias</h1>
         <p class="dark-body-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia saepe ex alias consectetur, nulla, in neque iure praesentium, modi eveniet consequuntur quaerat dolorum officiis vel. Dolores nihil quo eveniet vel.</p>
       </div>
@@ -38,11 +38,15 @@
       <img src="/noticias/noticia-expandida/fakevideo.png" alt="fake-video" class="w-100">
     </main>
   </section>
+  <footer class="ghp">
+    <NoticiasRelacionadas />
+  </footer>
   <FooterComponent/>
 </template>
 
 <script setup lang="ts">
   import Banner from '../../../components/general/Banner.vue'
+  import NoticiasRelacionadas from '../../../components/noticias/NoticiasRelacionadas.vue';
 </script>
 
 <style scoped lang="scss">
@@ -55,6 +59,22 @@
 
     display: flex;
     align-items: center;
+
+    .text-container {
+      width: 100%;
+      max-width: 500px;
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0;
+      }
+      p {
+        margin-bottom: 0;
+        font-size: 1rem;
+        max-height: 100px;
+        height: 100%;
+        overflow-y: auto;
+      }
+    }
 
     > img {
       width: 10%;
@@ -82,8 +102,14 @@
     align-items: center;
     header {
       flex-direction: column;
-      p {
+      margin-top: 3rem;
+      h1 {
+        font-size: 2rem;
+      }
+      p.dark-body-text {
         font-weight: bolder;
+        text-align: center;
+        font-size: 1.2rem;
       }
     }
     .dark-body-text {
@@ -94,6 +120,93 @@
       h3 {
         text-align: start;
         margin-top: 2rem;
+      }
+    }
+  }
+  @media (max-width: 1200px) {
+  .noticia-expandida-banner{
+    .text-container {
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 0.8rem;
+      }
+    }
+  }
+  }
+  @media (max-width: 991px) {
+    .noticia-expandida-banner{
+      .text-container {
+        max-width: 300px;
+        h1 {
+          font-size: 1.5rem;
+        }
+        p {
+          max-height: 60px;
+        }
+      }
+    }
+  .noticia-expandida {
+    header {
+      margin-top: 2rem;
+      h1 {
+        font-size: 1.5rem;
+      }
+      p.dark-body-text {
+        font-size: 1.2rem;
+      }
+    }
+    .dark-body-text {
+      font-size: 1rem;
+      text-align: justify;
+    }
+    main {
+      h3 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  }
+  @media (max-width: 768px) {
+    .noticia-expandida-banner{
+      .text-container {
+        max-width: 200px;
+        h1 {
+          font-size: 1rem;
+        }
+        p {
+          max-height: 40px;
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+  @media (max-width: 576px) {
+    .noticia-expandida-banner{
+      .text-container {
+        h1 {
+          font-size: 0.8rem;
+        }
+      }
+    }
+    .noticia-expandida {
+      header {
+        h1 {
+          font-size: 1.3rem;
+        }
+        p.dark-body-text {
+          font-size: 1rem;
+        }
+      }
+      .dark-body-text {
+        font-size: 1rem;
+        text-align: justify;
+      }
+      main {
+        h3 {
+          font-size: 1.3rem;
+        }
       }
     }
   }

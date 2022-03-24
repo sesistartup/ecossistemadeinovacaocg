@@ -1,9 +1,7 @@
 <template>
-	<div class="card-noticia-content">
+	<div class="card-noticia-content" :class="[isRelacionada ? 'is-relacionada' : 'not-relacionada']">
 		<div class="card-noticia-image"></div>
-
-		<p>Titulo da notícia</p>
-
+		<p v-if="!isRelacionada">Titulo da notícia</p>
 		<span>
 			Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
 			doloremque sint aut mollitia consectetur voluptate eos.
@@ -11,14 +9,27 @@
 	</div>
 </template>
 
+<script setup lang="ts">
+  const props = defineProps<{
+    isRelacionada: boolean
+  }>()
+</script>
+
 <style scoped lang="scss">
+
+.is-relacionada {
+  width: 50%;
+}
+.not-relacionada {
+  max-width: 385px;
+}
 .card-noticia-content {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-  max-width: 385px;
   max-height: 315px;
   padding: 10px;
+  min-width: 260px;
 
 	> p {
 		font-size: 24px;
