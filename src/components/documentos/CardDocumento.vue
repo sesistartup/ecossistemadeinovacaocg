@@ -16,6 +16,8 @@
   const props = defineProps<{
     title: string
     iconPath: string
+    text: string,
+    hasIcon: boolean
   }>()
 </script>
 
