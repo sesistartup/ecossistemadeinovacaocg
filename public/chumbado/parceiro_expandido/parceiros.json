@@ -1,0 +1,38 @@
+[
+  {
+    "parceiroId": "1",
+    "parceiroNome": "UCDB",
+    "primeiroParagrafo": "",
+    "subTitulo": " ",
+    "segundoParagrafo": " ",
+    "coverPath": "./capas/capa_ucdb.png",
+    "logoPath": ""
+  },
+  {
+    "parceiroId": "2",
+    "parceiroNome": "UEMS",
+    "primeiroParagrafo": "Atuar em conjunto com as instituições parceiras para intensificar a cooperação institucional para que as possibilidades de qualificação em Ciência e Tecnologia obtenha cada vez mais capilaridade nas diferentes parcelas da sociedade atendidas por cada instituição.",
+    "subTitulo": " ",
+    "segundoParagrafo": " ",
+    "coverPath": "./capas/capa_uems.png",
+    "logoPath": ""
+  },
+  {
+    "parceiroId": "3",
+    "parceiroNome": "UFMS",
+    "primeiroParagrafo": "A Universidade Federal de Mato Grosso do Sul (UFMS) é uma instituição de ensino superior responsável por gerar, difundir, socializar e aplicar conhecimentos que contribuam para a melhoria da qualidade de vida do ser humano em um ambiente sustentável, e formar profissionais que atendam aos anseios da sociedade brasileira. Por seu alcance, a UFMS é uma organização chave do desenvolvimento econômico e científico de Campo Grande e de Mato Grosso do Sul, através de ações de ensino, pesquisa, extensão e inovação.",
+    "subTitulo": " ",
+    "segundoParagrafo": " ",
+    "coverPath": "./capas/capa_ufms.png",
+    "logoPath": ""
+  },
+  {
+    "parceiroId": "4",
+    "parceiroNome": "AGINOVA",
+    "primeiroParagrafo": "A Agência de Internacionalização e de Inovação (AGINOVA) é a unidade da UFMS responsável por ações de internacionalização, de empreendedorismo, de inovação e de articulação institucional, promovendo a integração entre a universidade e demais agentes socioeconomicos. Através das unidades de apoio Pantanal Incubadora Mista de Empresas (PIME) e Núcleo de Inovação Tecnológica (NIT) apoia o desenvolvimento sociocientífico, tecnológico e inovador de Campo Grande - MS.",
+    "subTitulo": "",
+    "segundoParagrafo": "",
+    "coverPath": "./capas/capa_aginova.png",
+    "logoPath": ""
+  }
+]

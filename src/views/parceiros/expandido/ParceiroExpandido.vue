@@ -1,6 +1,6 @@
 <template>
     <NavBar 
-        :is-transparent="false"
+      :is-transparent="false"
     />
     <Banner
       path="/parceiros/parceiro-expandido/background.png"
@@ -16,12 +16,15 @@
       </div>
     </div>
     </Banner>
-    <ExpandedBody 
-      :partner-name="dummyPartner.name"
-      :first-paragraph="dummyPartner.firstParagraph"
-      :sub-title="dummyPartner.subTitle"
-      :second-paragraph="dummyPartner.secondParagraph"
-    />
+    {{ parceirosStore.getPartner($route.params.parceiroId.toString()) }}
+    <!-- TODO: finish consulting json -->
+    <!-- <ExpandedBody
+      v-if="!waitingStore"
+      :partner-name=""
+      :first-paragraph=""
+      :sub-title=""
+      :second-paragraph=""
+    /> -->
     <FooterComponent />
 </template>
 
@@ -29,6 +32,8 @@
 import { onMounted, reactive, ref } from 'vue';
 import Banner from '../../../components/general/Banner.vue';
 import ExpandedBody from '../../../components/parceiros/parceiroExpandido/ExpandedBody.vue';
+import { useParceirosStore } from '../../../stores/parceiros/store';
+import { useRoute } from 'vue-router';
 
 const dummyPartner = reactive({
   name: 'EMPRESA FICTÍCIA',
@@ -36,14 +41,30 @@ const dummyPartner = reactive({
   subTitle: 'LOREM IPSUM',
   secondParagraph: 'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final copy is available. It is also used to temporarily replace text in a process called greeking, which allows designers to consider the form of a webpage or publication, without the meaning of the text influencing the design.In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final copy is available. It is also used to temporarily replace text in a process called greeking, which allows designers to consider the form of a webpage or publication, without the meaning of the text influencing the design.'
 })
+let pt = reactive({
+  parceiroId: 'string',
+  nomeParceiro: 'string',
+  primeiroParagrafo: 'string',
+  subtitulo: 'string',
+  segundoParagrafo: 'string',
+  capaPath: 'string',
+  logoPath: 'string',
+})
 
 const hasLogo = ref(true) // Essa variável de controle supõe que a empresa parceira tem logo.
-
+const route = useRoute()
+const parceiroId = ref('')
+const parceirosStore = useParceirosStore()
+const waitingStore = ref(true)
 onMounted(() => { // Se algo der errado com a logo, então supoe-se que ela não o possui, e então o texto é exibido
+  waitingStore.value = true
+  parceiroId.value = route.params.parceiroId.toString()
   const logo: HTMLImageElement = document.querySelector('#parceiro-logo')!
   if (!logo.complete) {
     hasLogo.value = false
   }
+  parceirosStore.getPartner(parceiroId.value)
+  waitingStore.value = false
 })
 </script>
 
