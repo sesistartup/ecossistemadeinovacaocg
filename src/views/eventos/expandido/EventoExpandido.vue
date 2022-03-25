@@ -23,6 +23,8 @@
       img: '/eventos/event_img.png'
     }"
   />
+  <ContainerDescricao />
+  <ContainerOrganizador />
   <FooterComponent />
 </template>
 
@@ -30,6 +32,8 @@
 import NavBar from '../../../components/general/NavBar.vue'
 import Banner from '../../../components/general/Banner.vue';
 import ContainerInformacoes from '../../../components/eventos/expandido/ContainerInformacoes.vue';
+import ContainerDescricao from '../../../components/eventos/expandido/ContainerDescricao.vue';
+import ContainerOrganizador from '../../../components/eventos/expandido/ContainerOrganizador.vue';
 import FooterComponent from '../../../components/general/FooterComponent.vue';
 
 </script>
