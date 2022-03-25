@@ -10,7 +10,7 @@
           <GeneralBtn v-if="hasKnowMoreBtn"
             btnText="SAIBA MAIS"
             :isExternalLink="false"
-            link="/"
+            link="/quem-somos"
             bgColor="#629282"
             width="150px"
             textColor="#fff"
