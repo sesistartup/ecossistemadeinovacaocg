@@ -4,8 +4,8 @@
   />
   <Banner
     path="/eventos/banner.png"
-    img-alt="agenda de eventos"
-    figcaption="eventos do ecossistema"
+    img-alt="evento do hub"
+    figcaption="ilustração de evento"
   >
   <div class="d-flex h-100 position-absolute top-0 ghp">
     <img src="/eventos/banner_icon.png" alt="icon">
@@ -14,17 +14,28 @@
     </h1>
   </div>
   </Banner>
-  <Destaques />
-  <ContainerCardsEvento />
+  <ContainerInformacoes
+    :data="{
+      eventDate: '22/12/22',
+      eventId: 'kk',
+      eventLocation: 'acapulco',
+      eventName: 'Challenge',
+      img: '/eventos/event_img.png'
+    }"
+  />
+  <ContainerDescricao />
+  <ContainerOrganizador />
   <FooterComponent />
 </template>
 
 <script setup lang="ts">
-import NavBar from '../../components/general/NavBar.vue';
-import Banner from '../../components/general/Banner.vue';
-import Destaques from '../../components/eventos/Destaques.vue';
-import ContainerCardsEvento from '../../components/eventos/ContainerCardsEvento.vue';
-import FooterComponent from '../../components/general/FooterComponent.vue';
+import NavBar from '../../../components/general/NavBar.vue'
+import Banner from '../../../components/general/Banner.vue';
+import ContainerInformacoes from '../../../components/eventos/expandido/ContainerInformacoes.vue';
+import ContainerDescricao from '../../../components/eventos/expandido/ContainerDescricao.vue';
+import ContainerOrganizador from '../../../components/eventos/expandido/ContainerOrganizador.vue';
+import FooterComponent from '../../../components/general/FooterComponent.vue';
+
 </script>
 
 <style scoped lang="scss">
