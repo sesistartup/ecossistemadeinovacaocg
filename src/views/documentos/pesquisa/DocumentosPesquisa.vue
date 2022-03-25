@@ -14,8 +14,8 @@
     </div>
   </Banner>
   <section id="pesquisa-documento" class="container-fluid">
-    <main class="ghp row">
-      <div v-for="(doc, index) in docsToShow" class="col-12 col-sm-6 col-lg-4">
+    <main class="ghp row mt-5 mb-5">
+      <div v-for="(doc, index) in docsToShow" class="col-12 col-sm-6 col-lg-4 w-fit-content">
         <CardDocumento
           :title="doc.title"
           iconPath="none"
@@ -193,6 +193,12 @@ const route = useRoute()
     height: 100%;
     display: flex;
     align-items: center;
+    img {
+      width: 10%;
+      min-width: 60px;
+      max-width: 128px;
+      margin-right: 24px;
+    }
     .banner-text-container {
       > h1 {
         text-align: start;
@@ -200,10 +206,19 @@ const route = useRoute()
       margin-left: 10px;
     }
   }
-  /* section#pesquisa-documento {
+  section#pesquisa-documento {
     main {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      justify-content: space-between;
+      .w-fit-content {
+        width: fit-content !important;
+      }
     }
-  } */
+  }
+  @media (max-width: 991px) {
+    section#pesquisa-documento {
+      main {
+        justify-content: space-around;
+      }
+    } 
+  }
 </style>
