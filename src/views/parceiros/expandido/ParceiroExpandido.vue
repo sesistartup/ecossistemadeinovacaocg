@@ -15,9 +15,7 @@
       </div>
     </div>
     </Banner>
-    <!-- TODO: finish consulting json -->
     <ExpandedBody
-      v-if="!waitingStore"
       :partner-name="parceiroSelecionado.parceiroNome"
       :first-paragraph="parceiroSelecionado.primeiroParagrafo"
       :sub-title="parceiroSelecionado.subTitulo"
@@ -49,24 +47,30 @@ const parceiroSelecionado = computed(() => { // computed que retorna o parceiro 
     logoPath: ''
   }
 })
-const waitingStore = ref(true)
-onMounted(() => { // Se algo der errado com a logo, então supoe-se que ela não o possui, e então o texto é exibido
-  waitingStore.value = true
+const imageWidthBiggerThanHeight = () => {
   const logo: HTMLImageElement = document.querySelector('#parceiro-logo')!
-  if (!logo.complete) {
-    hasLogo.value = false
+  if (!logo.complete) hasLogo.value = false
+  else if (logo.clientWidth > logo.clientHeight) {
+    logo.classList.add('wider-image')
+  } else if (logo.clientWidth === logo.clientHeight) {
+    logo.classList.add('squared-image')
+  } else {
+    logo.classList.add('taller-image')
   }
-  waitingStore.value = false
+}
+onMounted(() => {
+  imageWidthBiggerThanHeight()
 })
 </script>
 
 <style scoped lang="scss">
   .partner-logo-container {
     position: absolute;
-    top: 50px;
+    top: 150px;
     align-items: center;
     justify-content: center;
-    .box {
+
+    .has-no-img {
       background-color: #fff;
       max-height: 365px;
       min-height: 120px;
@@ -74,13 +78,31 @@ onMounted(() => { // Se algo der errado com a logo, então supoe-se que ela não
       max-width: 300px;
       min-width: 120px;
       width: 100%;
+    }
+    .box {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-content: center;
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 10px;
       h1.dark-title {
         text-align: center;
         font-size: 1.5rem;
+      }
+      .wider-image {
+        max-width: 300px;
+        width: 100%;
+        height: 100px;
+      }
+      .taller-image {
+        height: 200px;
+        width: 150px;
+      }
+      .squared-image {
+        height: 200px;
+        width: 200px;
       }
     }
   }

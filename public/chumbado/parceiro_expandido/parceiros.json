@@ -2,10 +2,10 @@
   {
     "parceiroId": "1",
     "parceiroNome": "UCDB",
-    "primeiroParagrafo": "",
+    "primeiroParagrafo": "Atualmente a Universidade Católica Dom Bosco mantém 5 (cinco) Programas de Pós-Graduação Stricto Sensu: Educação, Psicologia, Desenvolvimento Local, Ciências Ambientais e Sustentabilidade Agropecuária e Biotecnologia. Destes, destacamos os Cursos de Mestrado e Doutorado em Desenvolvimento Local, Mestrado e Doutorado em Ciência Ambientais e Sustentabilidade Agropecuária e, também, Mestrado e Doutorado em Biotecnologia, com caráter de atendimentos e aspirações comuns, sociais, culturais, políticas, ecológicas e, principalmente econômicas e de produção. Todos desenvolvem processos interativos, a partir da visão crítica de determinados territórios, promovendo o contínuo desenvolver de habilidades para propor e gerenciar soluções criativas e sustentáveis voltadas para essas aspirações, a partir da atuação de pesquisadores (alunos e docentes) com grande experiência em suas áreas de atuação. Atualmente os programas de Pós-Graduação contam com conceitos de avaliação: 5 (Desenvolvimento Local), 4 (Ciência Ambientais e Sustentabilidade Agropecuária) e 4 (Biotecnologia), conforme avaliação prevista na Plataforma Sucupira da CAPES.",
     "subTitulo": " ",
     "segundoParagrafo": " ",
-    "coverPath": "/chumbado/parceiro_expandido/capas/capa_ucdb.png",
+    "coverPath": "/chumbado/parceiro_expandido/capas/capa_ucdb.jpg",
     "logoPath": "/chumbado/home_parceiros/ucdb.jpg"
   },
   {
@@ -32,7 +32,115 @@
     "primeiroParagrafo": "A Agência de Internacionalização e de Inovação (AGINOVA) é a unidade da UFMS responsável por ações de internacionalização, de empreendedorismo, de inovação e de articulação institucional, promovendo a integração entre a universidade e demais agentes socioeconomicos. Através das unidades de apoio Pantanal Incubadora Mista de Empresas (PIME) e Núcleo de Inovação Tecnológica (NIT) apoia o desenvolvimento sociocientífico, tecnológico e inovador de Campo Grande - MS.",
     "subTitulo": "",
     "segundoParagrafo": "",
-    "coverPath": "./capas/capa_aginova.png",
-    "logoPath": ""
+    "coverPath": "/chumbado/parceiro_expandido/capas/capa_aginova.png",
+    "logoPath": "/chumbado/home_parceiros/aginova.png"
+  },
+  {
+    "parceiroId": "5",
+    "parceiroNome": "SISTEMA FAMASUL",
+    "primeiroParagrafo": "",
+    "subTitulo": "",
+    "segundoParagrafo": "",
+    "coverPath": "/chumbado/parceiro_expandido/capas/capa_famasul.png",
+    "logoPath": "/chumbado/home_parceiros/famasul_senar_sindicatos.png"
+  },
+  {
+    "parceiroId": "6",
+    "parceiroNome": "FECOMERCIO",
+    "primeiroParagrafo": "",
+    "subTitulo": "",
+    "segundoParagrafo": "",
+    "coverPath": "/chumbado/parceiro_expandido/capas/capa_fecomercio.jpeg",
+    "logoPath": "/chumbado/home_parceiros/fecomercio.png"
+  },
+  {
+    "parceiroId": "7",
+    "parceiroNome": "FUNDECT",
+    "primeiroParagrafo": "A FUNDECT, vinculada à Secretaria de Estado de Meio Ambiente, Desenvolvimento Econômico, Produção e Agricultura Familiar (SEMAGRO), tem como finalidade apoiar, fomentar, incentivar e acompanhar o ensino, a pesquisa científica, tecnológica e de inovação nas instituições de ensino, e nas de ciência e tecnologia (ICTs), públicas ou privadas, a fim de promover o desenvolvimento científico, tecnológico, econômico, social e cultural do Estado de Mato Grosso do Sul.",
+    "subTitulo": "",
+    "segundoParagrafo": "",
+    "coverPath": "/chumbado/parceiro_expandido/capas/capa_fundect.png",
+    "logoPath": "/chumbado/home_parceiros/fundect.png"
+  },
+  {
+    "parceiroId": "8",
+    "parceiroNome": "ICT Inova Brasil",
+    "primeiroParagrafo": "A ICT Inova Brasil é uma instituição científica e de inovação tecnológica brasileira, criada a partir do novo marco legal da ciência, tecnologia e inovação (lei federal 13.243, de 11 de janeiro de 2016 e decreto 9283/2018), sem fins lucrativos, em conformidade com a lei das OSCIP (lei 9.790 de 23 de março de 1999). Tem como missão: Promover o desenvolvimento científico, tecnológico e social; Fomentar ações de inovação tecnológica e cultural; Fortalecer a indústria e academia nacionais; Propiciar o desenvolvimento sustentável e disseminar a responsabilidade ambiental.",
+    "subTitulo": "",
+    "segundoParagrafo": "",
+    "coverPath": "/chumbado/parceiro_expandido/capas/capa_ict_brasil.jpg",
+    "logoPath": "/chumbado/home_parceiros/ict_grande.png"
+  },
+  {
+    "parceiroId": "9",
+    "parceiroNome": "ENG Soluções Tecnológicas",
+    "primeiroParagrafo": "Somos uma empresa que desenvolve serviços e tecnologias descomplicadas para mercados escaláveis, visando a inovação e aplicação de tecnologias disruptivas, trazendo escala e aplicação global de soluções.",
+    "subTitulo": "",
+    "segundoParagrafo": "",
+    "coverPath": "/chumbado/parceiro_expandido/capas/capa_eng.png",
+    "logoPath": "/chumbado/home_parceiros/logo_eng.png"
+  },
+  {
+    "parceiroId": "10",
+    "parceiroNome": "PIME",
+    "primeiroParagrafo": "A função da Pantanal Incubadora Mista de Empresas PIME é apoiar o desenvolvimento de novos empreendimentos e prepará-los para sobreviver no mercado. A PIME é a incubadora de empresas da UFMS, criada em 2007 (Resolução CD n° 54/2017) para fomentar o empreendedorismo e apoiar novos negócios. Em 2019, a incubadora PIME foi certificada como Centro de Referência para Apoio a Novos Empreendimentos CERNE 1 pela Associação Nacional de Entidades Promotores de Empreendimentos Inovadores ANPROTEC.",
+    "subTitulo": "",
+    "segundoParagrafo": "",
+    "coverPath": "/chumbado/parceiro_expandido/capas/capa_pime.png",
+    "logoPath": "/chumbado/home_parceiros/pime.png"
+  },
+  {
+    "parceiroId": "11",
+    "parceiroNome": "SEMAGRO",
+    "primeiroParagrafo": "",
+    "subTitulo": "",
+    "segundoParagrafo": "",
+    "coverPath": "/chumbado/parceiro_expandido/capas/capa_semagro.jpg",
+    "logoPath": "/chumbado/home_parceiros/semagro.png"
+  },
+  {
+    "parceiroId": "12",
+    "parceiroNome": "SENAI MS",
+    "primeiroParagrafo": "O SENAI MS possui uma infraestrutura de tecnologia e profissionais experientes e capacitados para o desenvolvimento e aprimoramento de produtos e processos nos diversos setores industriais. Seu objetivo é apoiar a competitividade da indústria brasileira com a realização de projetos de pesquisa aplicada, consultorias e metrologia em parceria com empresas, fomentando a inovação, a prospecção, a difusão de tecnologias e a proteção da propriedade intelectual.",
+    "subTitulo": "",
+    "segundoParagrafo": "",
+    "coverPath": "/chumbado/parceiro_expandido/capas/capa_senai.png",
+    "logoPath": "/chumbado/home_parceiros/senai.png"
+  },
+  {
+    "parceiroId": "13",
+    "parceiroNome": "INCUBADORA MUNICIPAL",
+    "primeiroParagrafo": "É um centro de desenvolvimento empresarial e de treinamentos, que promovem a atividade  e cultura empreendedora, mantido pela Prefeitura Municipal de Campo Grande,  proporcionando o ambiente propício para aproximação e networking entre startups e grandes empresas para a promoção da inovação corporativa e a geração de negócios.",
+    "subTitulo": "",
+    "segundoParagrafo": "",
+    "coverPath": "/chumbado/parceiro_expandido/capas/capa_incub_municipal.png",
+    "logoPath": "/chumbado/home_parceiros/incubadora_municipal.png"
+  },
+  {
+    "parceiroId": "14",
+    "parceiroNome": "ECOINOVA",
+    "primeiroParagrafo": "🧑🏻Founder and CEO: Roger Milan.\n\n🥇Propósito|Missão da ECOINOVA:\n\nContribuir para o Desenvolvimento e Integração dos Atores do Ecossistema de Inovação do Mato Grosso do Sul, Sensibilizar, Conscientizar e Mobilizar, sobre a importância do novo momento de inovação que ocorre no mundo.",
+    "subTitulo": "Knowhow e Expertizes",
+    "segundoParagrafo": "✓ Desenvolvimento de Ecossistemas de Inovação.\n✓ Implementação de Habitats de Inovação\n✓ Desenvolvimento de Startups da fase embrionária ao mercado.\n✓ Corporate Venture Capital, Investimento Anjo, Fundos de Subvenção.\n✓ Catalisação de Inovação para os Setores Público e Privado.\n✓ Soluções Inovadoras p/ a Sociedade, Saúde, Educação, Economia, Infra, Cultura, Mercado, Agro e demais áreas.\n✓ Inovação Aberta.\n✓ Organizações Exponenciais.\n✓ Big Data, Blockchain (Metaverso, NFTs, Play-Games-to-Earn, Criptoativos), Inteligência Artificial, Machine Learning, Veículos Autônomos, Híbridos, Elétricos, Solares, Hidrogênio, Nucleares.\n✓ Humanização do Ambiente Organizacional e Tecnológico.",
+    "coverPath": "/chumbado/parceiro_expandido/capas/capa_ecoinova.jpeg",
+    "logoPath": "/chumbado/home_parceiros/ecoinova.png"
+  },
+  {
+    "parceiroId": "15",
+    "parceiroNome": "LIVING LAB MS",
+    "primeiroParagrafo": "O Living Lab MS é o laboratório vivo de inovação do SEBRAE, inaugurado em 2016, em parceria com 42 instituições públicas e privadas, com o propósito de fomentar o empreendedorismo e a inovação de forma disruptiva. Atende em formato figital (físico e digital) a empreendedores de todo o estado de Mato Grosso do Sul. Da ideia de negócio, formatação da solução, captação dos primeiros clientes, consolidação no mercado até o crescimento exponencial, nossos programas de aceleração possuem jornadas específicas para cada estágio do empreendedor.  Em nosso Lab Maker, projetos e ideias viram protótipos fabricados digitalmente em impressoras 3D, fresadoras, Router, Máquinas de Corte a Laser, etc. O laboratório de prototipagem do Living Lab MS integra a rede mundial FAB LAB de fabricação digital e por isso é possível acessar e reproduzir protótipos testados e validados em todo mundo. Para ampliar o acesso a mercado a empresas inovadoras e acelerar a inovação no ambiente corporativo, o Living Lab MS faz a conexão entre soluções de startups e as médias e grandes empresas que demandam tecnologias, produtos, serviços e automações. Faça o Tour 360 no Living Lab MS, tenha uma experiência em Realidade Virtual: https://www.livinglabms.com.br/tour-360",
+    "subTitulo": "",
+    "segundoParagrafo": "",
+    "coverPath": "/chumbado/parceiro_expandido/capas/capa_livinglab.jpg",
+    "logoPath": "/chumbado/home_parceiros/livinglab.png"
+  },
+  {
+    "parceiroId": "16",
+    "parceiroNome": "REPÚBLICA DAS ARTEIRAS",
+    "primeiroParagrafo": "Somos uma Startup de negócios sociais através de um marketplace de prestação de serviços, voltada para o setor de confecções de vestuário e moda criada a partir de um coletivo de costureiras na periferia sul da nossa capital. Como tal, fazemos parte de uma ampla rede de network com a cadeia produtiva e consumidores deste setor. Outrossim, temos uma trajetória empreendedora que pode ser útil na construção da trilha do empreendedor no Ecossistema.",
+    "subTitulo": "",
+    "segundoParagrafo": "",
+    "coverPath": "/chumbado/parceiro_expandido/capas/capa_arteiras.jpg",
+    "logoPath": "/chumbado/home_parceiros/arteiras.png"
   }
 ]
