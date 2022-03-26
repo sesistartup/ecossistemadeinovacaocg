@@ -3,67 +3,59 @@
       :is-transparent="false"
     />
     <Banner
-      path="/parceiros/parceiro-expandido/background.png"
+      :path="parceiroSelecionado.coverPath"
       figcaption="graphs"
       img-alt="partner page"
       max-height="352px"
     >
     <div class="d-flex h-100 w-100 partner-logo-container">
       <div class="box">
-        <!-- TODO: setup state for partners -->
-        <img v-if="hasLogo" src="" alt="Logo Parceiro" id="parceiro-logo">
+        <img v-if="hasLogo" :src="parceiroSelecionado.logoPath" alt="Logo Parceiro" id="parceiro-logo">
         <h1 v-else class="dark-title">Logo<br>Parceiro</h1>
       </div>
     </div>
     </Banner>
-    {{ parceirosStore.getPartner($route.params.parceiroId.toString()) }}
     <!-- TODO: finish consulting json -->
-    <!-- <ExpandedBody
+    <ExpandedBody
       v-if="!waitingStore"
-      :partner-name=""
-      :first-paragraph=""
-      :sub-title=""
-      :second-paragraph=""
-    /> -->
+      :partner-name="parceiroSelecionado.parceiroNome"
+      :first-paragraph="parceiroSelecionado.primeiroParagrafo"
+      :sub-title="parceiroSelecionado.subTitulo"
+      :second-paragraph="parceiroSelecionado.segundoParagrafo"
+    />
     <FooterComponent />
 </template>
 
 <script setup lang="ts">
-import { onMounted, reactive, ref } from 'vue';
-import Banner from '../../../components/general/Banner.vue';
-import ExpandedBody from '../../../components/parceiros/parceiroExpandido/ExpandedBody.vue';
+import { computed, onMounted, ref } from 'vue';
 import { useParceirosStore } from '../../../stores/parceiros/store';
 import { useRoute } from 'vue-router';
-
-const dummyPartner = reactive({
-  name: 'EMPRESA FICTÍCIA',
-  firstParagraph: 'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final copy is available. It is also used to temporarily replace text in a process called greeking, which allows designers to consider the form of a webpage or publication, without the meaning of the text influencing the design.',
-  subTitle: 'LOREM IPSUM',
-  secondParagraph: 'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final copy is available. It is also used to temporarily replace text in a process called greeking, which allows designers to consider the form of a webpage or publication, without the meaning of the text influencing the design.In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final copy is available. It is also used to temporarily replace text in a process called greeking, which allows designers to consider the form of a webpage or publication, without the meaning of the text influencing the design.'
-})
-let pt = reactive({
-  parceiroId: 'string',
-  nomeParceiro: 'string',
-  primeiroParagrafo: 'string',
-  subtitulo: 'string',
-  segundoParagrafo: 'string',
-  capaPath: 'string',
-  logoPath: 'string',
-})
+import Banner from '../../../components/general/Banner.vue';
+import ExpandedBody from '../../../components/parceiros/parceiroExpandido/ExpandedBody.vue';
 
 const hasLogo = ref(true) // Essa variável de controle supõe que a empresa parceira tem logo.
-const route = useRoute()
-const parceiroId = ref('')
-const parceirosStore = useParceirosStore()
+const route = useRoute() // acesso à rota para buscar o id do parceiro
+const parceirosStore = useParceirosStore() // acesso ao store
+const parceiroSelecionado = computed(() => { // computed que retorna o parceiro selecionado para o template
+  const p = parceirosStore.getPartner(route.params.parceiroId.toString());
+  if (p) return p
+  else return {
+    parceiroId: '-1',
+    parceiroNome: 'Algo falhou :(',
+    primeiroParagrafo: '',
+    subTitulo: '',
+    segundoParagrafo: '',
+    coverPath: '',
+    logoPath: ''
+  }
+})
 const waitingStore = ref(true)
 onMounted(() => { // Se algo der errado com a logo, então supoe-se que ela não o possui, e então o texto é exibido
   waitingStore.value = true
-  parceiroId.value = route.params.parceiroId.toString()
   const logo: HTMLImageElement = document.querySelector('#parceiro-logo')!
   if (!logo.complete) {
     hasLogo.value = false
   }
-  parceirosStore.getPartner(parceiroId.value)
   waitingStore.value = false
 })
 </script>

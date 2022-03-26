@@ -5,8 +5,8 @@
     "primeiroParagrafo": "",
     "subTitulo": " ",
     "segundoParagrafo": " ",
-    "coverPath": "./capas/capa_ucdb.png",
-    "logoPath": ""
+    "coverPath": "/chumbado/parceiro_expandido/capas/capa_ucdb.png",
+    "logoPath": "/chumbado/home_parceiros/ucdb.jpg"
   },
   {
     "parceiroId": "2",
@@ -14,8 +14,8 @@
     "primeiroParagrafo": "Atuar em conjunto com as instituições parceiras para intensificar a cooperação institucional para que as possibilidades de qualificação em Ciência e Tecnologia obtenha cada vez mais capilaridade nas diferentes parcelas da sociedade atendidas por cada instituição.",
     "subTitulo": " ",
     "segundoParagrafo": " ",
-    "coverPath": "./capas/capa_uems.png",
-    "logoPath": ""
+    "coverPath": "/chumbado/parceiro_expandido/capas/capa_uems.png",
+    "logoPath": "/chumbado/home_parceiros/uems.png"
   },
   {
     "parceiroId": "3",
@@ -23,8 +23,8 @@
     "primeiroParagrafo": "A Universidade Federal de Mato Grosso do Sul (UFMS) é uma instituição de ensino superior responsável por gerar, difundir, socializar e aplicar conhecimentos que contribuam para a melhoria da qualidade de vida do ser humano em um ambiente sustentável, e formar profissionais que atendam aos anseios da sociedade brasileira. Por seu alcance, a UFMS é uma organização chave do desenvolvimento econômico e científico de Campo Grande e de Mato Grosso do Sul, através de ações de ensino, pesquisa, extensão e inovação.",
     "subTitulo": " ",
     "segundoParagrafo": " ",
-    "coverPath": "./capas/capa_ufms.png",
-    "logoPath": ""
+    "coverPath": "/chumbado/parceiro_expandido/capas/capa_ufms.jpg",
+    "logoPath": "/chumbado/home_parceiros/ufms.png"
   },
   {
     "parceiroId": "4",

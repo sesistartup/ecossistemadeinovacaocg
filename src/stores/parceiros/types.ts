@@ -1,9 +1,9 @@
 export interface PartnerInterface {
   parceiroId: string
-  nomeParceiro: string
+  parceiroNome: string
   primeiroParagrafo: string
-  subtitulo: string
+  subTitulo: string
   segundoParagrafo: string
-  capaPath: string
+  coverPath: string
   logoPath: string
 }
