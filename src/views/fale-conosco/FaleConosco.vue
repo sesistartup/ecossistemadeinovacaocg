@@ -7,7 +7,11 @@
   >
     <div class="d-flex h-100">
       <img src="/fale-conosco/fale-conosco-icon.png" alt="Fale Conosco">
-      <h1 class="dark-title">FALE<br>CONOSCO</h1>
+      <h1 class="dark-title">FALE<br>CONOSCO
+        <p class="dark-body-text">
+          contato@ecossistemadeinovacaocg.com.br
+        </p>
+      </h1>
     </div>
   </Banner>
   <Formulario />
@@ -36,6 +40,9 @@ import Formulario from '../../components/faleConosco/Formulario.vue';
       text-align: start;
       margin-bottom: 2.5rem !important;
       margin-left: 2rem;
+      p.dark-body-text {
+        font-size: 1rem;
+      }
     }
   }
   @media (max-width: 1200px) {

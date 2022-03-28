@@ -38,6 +38,7 @@ import CardParceiro from './CardParceiro.vue';
       margin-bottom: 10px;
       h1 {
         font-size: 1.5rem;
+        white-space: nowrap;
       }
     }
     main{
@@ -45,13 +46,6 @@ import CardParceiro from './CardParceiro.vue';
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       grid-template-rows: 220px;
       gap: 20px 9%;
-    }
-  }
-  @media (max-width: 991px) {
-    .container-cards-parceiros {
-      header {
-        // margin-top: 0;
-      }
     }
   }
   @media (max-width: 768px) {
@@ -67,6 +61,9 @@ import CardParceiro from './CardParceiro.vue';
     .container-cards-parceiros {
       main {
         justify-items: center;
+      }
+      header > h1 {
+        white-space: normal;
       }
     }
     section.container-cards-parceiros {

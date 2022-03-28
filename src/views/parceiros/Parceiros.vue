@@ -38,14 +38,8 @@ import { onMounted, reactive } from 'vue';
 
   const parceirosContainers = reactive([
     {
-      tipoInstituicao: 'UNIVERSIDADES',
+      tipoInstituicao: 'ICTIs',
       parceiros: [
-        {
-          hasLogo: true,
-          logo: '/chumbado/home_parceiros/ucdb.jpg',
-          logoAlt: 'ucdb',
-          parceiroId: 1
-        },
         {
           hasLogo: true,
           logo: '/chumbado/home_parceiros/uems.png',
@@ -57,35 +51,6 @@ import { onMounted, reactive } from 'vue';
           logo: '/chumbado/home_parceiros/ufms.png',
           logoAlt: 'ufms',
           parceiroId: 3
-        }
-      ]
-    },
-    {
-      tipoInstituicao: 'EMPRESAS',
-      parceiros: [
-        {
-          hasLogo: true,
-          logo: '/chumbado/home_parceiros/aginova.png',
-          logoAlt: 'parceiro',
-          parceiroId: 4
-        },
-        {
-          hasLogo: true,
-          logo: '/chumbado/home_parceiros/famasul_senar_sindicatos.png',
-          logoAlt: 'parceiro',
-          parceiroId: 5
-        },
-        {
-          hasLogo: true,
-          logo: '/chumbado/home_parceiros/fecomercio.png',
-          logoAlt: 'parceiro',
-          parceiroId: 6
-        },
-        {
-          hasLogo: true,
-          logo: '/chumbado/home_parceiros/fundect.png',
-          logoAlt: 'parceiro',
-          parceiroId: 7
         },
         {
           hasLogo: true,
@@ -95,33 +60,50 @@ import { onMounted, reactive } from 'vue';
         },
         {
           hasLogo: true,
-          logo: '/chumbado/home_parceiros/logo_eng.png',
+          logo: '/chumbado/home_parceiros/ict_ms.png',
           logoAlt: 'parceiro',
-          parceiroId: 9
-        },
-        {
-          hasLogo: true,
-          logo: '/chumbado/home_parceiros/pime.png',
-          logoAlt: 'parceiro',
-          parceiroId: 10
-        },
-        {
-          hasLogo: true,
-          logo: '/chumbado/home_parceiros/semagro.png',
-          logoAlt: 'parceiro',
-          parceiroId: 11
-        },
-        {
-          hasLogo: true,
-          logo: '/chumbado/home_parceiros/senai.png',
-          logoAlt: 'parceiro',
-          parceiroId: 12
+          parceiroId: 17
         }
       ]
     },
     {
-      tipoInstituicao: 'STARTUPS',
+      tipoInstituicao: 'EMPRESAS',
       parceiros: [
+        {
+          hasLogo: true,
+          logo: '/chumbado/home_parceiros/arteiras.png',
+          logoAlt: 'parceiro',
+          parceiroId: 16
+        },
+        {
+          hasLogo: true,
+          logo: '/chumbado/home_parceiros/logo_eng.png',
+          logoAlt: 'parceiro',
+          parceiroId: 9
+        }
+      ]
+    },
+    {
+      tipoInstituicao: 'MECANISMOS DE INOVAÇÃO',
+      parceiros: [
+        {
+          hasLogo: true,
+          logo: '/chumbado/home_parceiros/logo_startup.png',
+          logoAlt: 'parceiro',
+          parceiroId: 19
+        },
+        {
+          hasLogo: true,
+          logo: '/chumbado/home_parceiros/aginova.png',
+          logoAlt: 'parceiro',
+          parceiroId: 4
+        },
+        {
+          hasLogo: true,
+          logo: '/chumbado/home_parceiros/ucdb.jpg',
+          logoAlt: 'ucdb',
+          parceiroId: 1
+        },
         {
           hasLogo: true,
           logo: '/chumbado/home_parceiros/incubadora_municipal.png',
@@ -142,9 +124,55 @@ import { onMounted, reactive } from 'vue';
         },
         {
           hasLogo: true,
-          logo: '/chumbado/home_parceiros/arteiras.png',
+          logo: '/chumbado/home_parceiros/pime.png',
           logoAlt: 'parceiro',
-          parceiroId: 16
+          parceiroId: 10
+        }
+      ]
+    },
+    {
+      tipoInstituicao: 'GOVERNO',
+      parceiros: [
+        {
+          hasLogo: true,
+          logo: '/chumbado/home_parceiros/fundect.png',
+          logoAlt: 'parceiro',
+          parceiroId: 7
+        },
+        {
+          hasLogo: true,
+          logo: '/chumbado/home_parceiros/semagro.png',
+          logoAlt: 'parceiro',
+          parceiroId: 11
+        }
+      ]
+    },
+    {
+      tipoInstituicao: 'SOCIEDADE ORGANIZADA',
+      parceiros: [
+        {
+          hasLogo: true,
+          logo: '/chumbado/home_parceiros/logo_fiems.jpg',
+          logoAlt: 'parceiro',
+          parceiroId: 18
+        },
+        {
+          hasLogo: true,
+          logo: '/chumbado/home_parceiros/famasul_senar_sindicatos.png',
+          logoAlt: 'parceiro',
+          parceiroId: 5
+        },
+        {
+          hasLogo: true,
+          logo: '/chumbado/home_parceiros/fecomercio.png',
+          logoAlt: 'parceiro',
+          parceiroId: 6
+        },
+        {
+          hasLogo: true,
+          logo: '/chumbado/home_parceiros/senai.png',
+          logoAlt: 'parceiro',
+          parceiroId: 12
         }
       ]
     }

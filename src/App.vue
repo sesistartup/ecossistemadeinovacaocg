@@ -1,8 +1,10 @@
 <script setup lang="ts">
+import Cookies from './components/general/Cookies.vue'
 </script>
 
 <template>
   <router-view />
+  <Cookies />
 </template>
 
 <style lang="scss">

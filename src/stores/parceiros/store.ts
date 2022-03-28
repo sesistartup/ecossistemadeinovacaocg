@@ -7,6 +7,7 @@ export const useParceirosStore = defineStore('parceirosStore', {
       parceiros: new Array<PartnerInterface>
     }
   },
+  persist: true,
   actions: {
     setPartner(p: PartnerInterface) {
       this.parceiros.push(p)

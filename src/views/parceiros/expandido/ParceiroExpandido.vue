@@ -21,6 +21,15 @@
       :sub-title="parceiroSelecionado.subTitulo"
       :second-paragraph="parceiroSelecionado.segundoParagrafo"
     />
+    <ContatoParceiro
+      :instaLink="parceiroSelecionado.instaLink"
+      :linkedinLink="parceiroSelecionado.linkedinLink"
+      :wppLink="parceiroSelecionado.wppLink"
+      :email-contato="parceiroSelecionado.emailContato"
+      :telefone="parceiroSelecionado.telefone"
+      :website="parceiroSelecionado.website"
+      :endereco="parceiroSelecionado.endereco"
+    />
     <FooterComponent />
 </template>
 
@@ -30,6 +39,7 @@ import { useParceirosStore } from '../../../stores/parceiros/store';
 import { useRoute } from 'vue-router';
 import Banner from '../../../components/general/Banner.vue';
 import ExpandedBody from '../../../components/parceiros/parceiroExpandido/ExpandedBody.vue';
+import ContatoParceiro from '../../../components/parceiros/ContatoParceiro.vue';
 
 const hasLogo = ref(true) // Essa variável de controle supõe que a empresa parceira tem logo.
 const route = useRoute() // acesso à rota para buscar o id do parceiro
@@ -44,7 +54,14 @@ const parceiroSelecionado = computed(() => { // computed que retorna o parceiro 
     subTitulo: '',
     segundoParagrafo: '',
     coverPath: '',
-    logoPath: ''
+    logoPath: '',
+    instaLink: '',
+    linkedinLink: '',
+    wppLink: '',
+    emailContato: '',
+    telefone: '',
+    website: '',
+    endereco: ''
   }
 })
 const imageWidthBiggerThanHeight = () => {
