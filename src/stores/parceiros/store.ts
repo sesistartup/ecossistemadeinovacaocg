@@ -4,7 +4,7 @@ import { PartnerInterface } from "./types";
 export const useParceirosStore = defineStore('parceirosStore', {
   state: () => {
     return {
-      parceiros: new Array<PartnerInterface>
+      parceiros: new Array<PartnerInterface>()
     }
   },
   persist: true,
