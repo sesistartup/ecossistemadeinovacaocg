@@ -44,9 +44,11 @@ export const useComunicacaoStore = defineStore('comunicacaoStore', {
             this.faleConoscoSetores.push(e);
           });
         }
+        else if (response.data.codigo === 661 || response.data.codigo === 666) {
+          console.error(response.data.resposta)
+        }
       } catch (error) {
         this.faleConoscoResponse.putError(661, 'check console')
-        console.log(error)
       }
       return false; // retorno que indica que a resposta chegou
     }

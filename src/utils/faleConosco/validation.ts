@@ -21,7 +21,7 @@ const cargoIsValid = (c: string) => {
   return true;
 }
 const setorIdIsValid = (s: number) => {
-  return (s > 0 && s < 4) ? true : false;
+  return (s > 0 && s < 7) ? true : false;
 }
 const messageIsValid = (m: string) => {
   if (!m || m.length < 10) return false;

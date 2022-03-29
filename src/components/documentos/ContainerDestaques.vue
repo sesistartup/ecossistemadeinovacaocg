@@ -98,7 +98,6 @@ const dummyCardsPages = reactive([
 ])
 
 const setSelectedPage = (page: number) => {
-  console.log(page)
   if (page >= indicators.value) {
     selectedPage.value = 0
   } else if (page < 0) {

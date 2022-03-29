@@ -1,7 +1,7 @@
 <template>
   <form action="submit" class="fale-conosco ghp">
     <input class="half-size form-control boring-gray-border" v-model="contactForm.nome" type="text" name="person-name" id="name-input" placeholder="Nome">
-    <select class="half-size form-control form-select boring-gray-border" v-model="contactForm.setorId" aria-label="Default select example">
+    <select class="half-size form-control form-select boring-gray-border" v-model="contactForm.setorId" aria-label="Default select example" :disabled="waitingSetores">
       <option v-for="(setor, index) in comunicacaoStore.faleConoscoSetores" :key="setor.id" :value="setor.id">{{ setor.descricao }}</option>
       <option value="0" selected>Selecione um setor</option>
     </select>
@@ -46,6 +46,8 @@ import { Modal } from 'bootstrap';
     const res = comunicacaoStore.faleConoscoResponse.getResponse()
     if (res.code === 200) {
       openModal('faleConoscoRes', 'Sucesso', res.message, 'success')
+    } else if (res.code === 661 || res.code === 666) {
+        console.error(res.message)
     } else {
       openModal('faleConoscoRes', 'Falha', res.message, 'warning')
     }
@@ -74,7 +76,6 @@ import { Modal } from 'bootstrap';
   onMounted( async () => {
     waitingSetores.value = true;
     waitingSetores.value = await comunicacaoStore.getFaleConoscoSetores();
-    console.log(comunicacaoStore.$state)
   })
 </script>
 
