@@ -13,7 +13,7 @@
         <img src="/parceiros/parceiro_icon.png" alt="Fale Conosco">
         <h1 class="dark-title">PARCEIROS
           <p class="dark-body-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum rerum esse tempora aspernatur, laudantium, quisquam officia nostrum iure impedit alias neque. Ad dicta reprehenderit perferendis laborum commodi iure assumenda sed?
+            Um ecossistema saudável se faz através da colaboração e interdependencia entre todos os membros. Por isso é tão importante a presença de todos os parceiros:
           </p>
         </h1>
       </div>

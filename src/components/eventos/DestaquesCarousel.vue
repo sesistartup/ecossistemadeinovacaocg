@@ -71,6 +71,7 @@ import GeneralBtn from '../buttons/GeneralBtn.vue';
       margin-left: auto !important;
     }
     .carousel-control-next, .carousel-control-prev {
+      z-index: 5;
       top: unset;
     }
     .carousel-indicators {

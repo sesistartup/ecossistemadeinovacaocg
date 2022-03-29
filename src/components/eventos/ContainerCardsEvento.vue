@@ -141,21 +141,21 @@ const dummyContainer = reactive([
       image: 'opa',
       nomeEvento: "Evento 01",
       dataEvento: "11/11/2023",
-      enderecoEvento: "Quadrado das Sungas, WTF",
+      enderecoEvento: "Campo Grande, MS",
     },
     {
       hasImage: false,
       image: 'opa',
       nomeEvento: "Evento 01",
       dataEvento: "11/11/2023",
-      enderecoEvento: "Losango das Regatas, WTF",
+      enderecoEvento: "Campo Grande, MS",
     },
     {
       hasImage: false,
       image: 'opa',
       nomeEvento: "Evento abc",
       dataEvento: "27/11/2023",
-      enderecoEvento: "Triângulo das Bermudas, WTF",
+      enderecoEvento: "Campo Grande, MS",
     }
   ]
 ])
@@ -179,21 +179,21 @@ const addEventsToView = () => {
       image: '/home/carousel/embrapa.png',
       nomeEvento: "Evento adicionado",
       dataEvento: "05/07/2024",
-      enderecoEvento: "Acapulco",
+      enderecoEvento: "Campo Grande, MS",
     },
     {
       hasImage: false,
       image: 'opa',
       nomeEvento: "Evento 01",
       dataEvento: "11/11/2023",
-      enderecoEvento: "Losango das Regatas, WTF",
+      enderecoEvento: "Dourados, MS",
     },
     {
       hasImage: false,
       image: 'opa',
       nomeEvento: "Evento abc",
       dataEvento: "27/11/2023",
-      enderecoEvento: "Triângulo das Bermudas, WTF",
+      enderecoEvento: "Três Lagos, MS",
     }
   ])
 }
