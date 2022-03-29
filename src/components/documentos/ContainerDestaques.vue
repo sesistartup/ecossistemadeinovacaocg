@@ -6,7 +6,7 @@
     <main>
     <nav v-for="(cardPage, index) in dummyCardsPages">
       <div class="destaques" v-if="index === selectedPage">
-        <div v-for="(card, index) in cardPage" :key="index" class="useless-box">Destaque {{ index }}</div>
+        <div v-for="(card, index) in cardPage" :key="index" class="useless-box">{{ card.nomeDocumento }}</div>
       </div>
     </nav>
     </main>
@@ -24,84 +24,39 @@
 import { reactive, ref } from 'vue'
 
 const selectedPage = ref(0)
-const indicators = ref(3)
+const indicators = ref(2)
 const dummyCardsPages = reactive([
   [
     {
       hasImage: false,
       image: 'opa',
-      nomeEvento: "Evento 01",
-      dataEvento: "11/11/2023",
-      enderecoEvento: "Quadrado das Sungas, WTF",
+      nomeDocumento: "Decreto CTI MS"
     },
     {
       hasImage: false,
       image: 'opa',
-      nomeEvento: "Evento 01",
-      dataEvento: "11/11/2023",
-      enderecoEvento: "Losango das Regatas, WTF",
+      nomeDocumento: "Lei 6709 - Incubadoras Municipais"
     },
     {
       hasImage: false,
       image: 'opa',
-      nomeEvento: "Evento abc",
-      dataEvento: "27/11/2023",
-      enderecoEvento: "Triângulo das Bermudas, WTF",
+      nomeDocumento: "Politica Municipal Inovação"
     }
   ],
   [
     {
       hasImage: false,
       image: 'opa',
-      nomeEvento: "Macacos me mordam",
-      dataEvento: "11/11/2023",
-      enderecoEvento: "Quadrado das Sungas, WTF",
-    },
-    {
-      hasImage: false,
-      image: 'opa',
-      nomeEvento: "Evento 01",
-      dataEvento: "11/11/2023",
-      enderecoEvento: "Losango das Regatas, WTF",
-    },
-    {
-      hasImage: false,
-      image: 'opa',
-      nomeEvento: "Evento abc",
-      dataEvento: "27/11/2023",
-      enderecoEvento: "Triângulo das Bermudas, WTF",
+      nomeDocumento: "Prodes Incentivo Fiscal Isenções"
     }
   ],
-  [
-    {
-      hasImage: false,
-      image: 'opa',
-      nomeEvento: "Evento 01",
-      dataEvento: "11/11/2023",
-      enderecoEvento: "Quadrado das Sungas, WTF",
-    },
-    {
-      hasImage: false,
-      image: 'opa',
-      nomeEvento: "Evento 01",
-      dataEvento: "11/11/2023",
-      enderecoEvento: "Losango das Regatas, WTF",
-    },
-    {
-      hasImage: false,
-      image: 'opa',
-      nomeEvento: "Treinamento do cão",
-      dataEvento: "27/11/2023",
-      enderecoEvento: "Triângulo das Bermudas, WTF",
-    }
-  ]
 ])
 
 const setSelectedPage = (page: number) => {
   if (page >= indicators.value) {
     selectedPage.value = 0
   } else if (page < 0) {
-    selectedPage.value = 2
+    selectedPage.value = indicators.value - 1
   } else {
     selectedPage.value = page
   }
