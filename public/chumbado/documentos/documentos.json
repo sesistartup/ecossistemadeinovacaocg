@@ -1,0 +1,26 @@
+[
+  {
+    "noticiaId": "1",
+    "title": "Decreto CTI - MS",
+    "description": "Considerando os princípios da unidade, da universalidade e da anualidade orçamentárias, bem como a necessidade de uniformização de procedimentos a serem adotados no encerramento da execução orçamentária, financeira e patrimonial e no levantamento do Balanço Geral do Estado",
+    "downloadPath": "/chumbado/documentos/decreto-cti-ms.pdf"
+  },
+  {
+    "noticiaId": "2",
+    "title": "Lei 6709 - Incubadoras Municipais",
+    "description": "Institui o Programa Municipal de Incubação de Empresas de Campo Grande, com a finalidade de apoiar micro e pequenas empresas.",
+    "downloadPath": "/chumbado/documentos/lei-6709-incubadoras-municipais.pdf"
+  },
+  {
+    "noticiaId": "3",
+    "title": "Política Municipal de Inovação",
+    "description": "fomentar e firmar parcerias de pesquisa conjunta com empresas e instituições de ensino e pesquisa públicas ou privadas, nacionais ou internacionais, visando à inovação que viabilize geração, desenvolvimento e criação de novos produtos, processos e sistemas",
+    "downloadPath": "/chumbado/documentos/politica-municipal-inovacao.pdf"
+  },
+  {
+    "noticiaId": "4",
+    "title": "PRODES - Incentivo Fiscal e Isenções",
+    "description": "O Programa de Incentivos para o Desenvolvimento Econômico e Social de Campo Grande - PRODES tem como finalidade impulsionar o desenvolvimento econômico, social, turístico, cultural e tecnológico do Município, de forma sustentável, mediante a concessão de incentivos fiscais e extrafiscais para pessoas jurídicas e empresários individuais, assim registrados nos órgãos competentes, que preencherem os requisitos previstos nesta Lei Complementar",
+    "downloadPath": "/chumbado/documentos/prodes-incentivo-fiscal-isencoes.pdf"
+  }
+]

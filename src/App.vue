@@ -1,52 +1,143 @@
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import HelloWorld from './components/HelloWorld.vue'
-import { useFruitStore } from './stores/fruits/store'
-
-const fruitStore = useFruitStore() // atribuindo state
-
-console.log(fruitStore.$state.fruit)
-
-fruitStore.$patch({ // mutando state declarativamente
-  fruit: {
-    color: 'red',
-    flavor: 'sweet',
-    amount: 0,
-    name: 'apple'
-  }
-})
-
-console.log(fruitStore.$state.fruit)
-
-fruitStore.$patch((state) => { // mutando state por função
-  const name: string = state.fruit.name
-  if (name === 'apple') {
-    state.fruit.amount = 11
-  } else {
-    state.fruit.amount = 93
-  }
-})
-
-console.log(fruitStore.$state.fruit)
-
-// para acessar um getter, basta invocá-lo como se fosse propriedade de um objeto ou um método
-fruitStore.amountPlusOneWithoutThis
-fruitStore.amountPlusOneWithThis
+import Cookies from './components/general/Cookies.vue'
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <router-view />
+  <Cookies />
 </template>
 
-<style>
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+@font-face {
+  font-family: 'Gotham-Book';
+  src: url(/fonts/Gotham\ Book.otf);
+}
+@font-face {
+  font-family: 'Lulu-Bold';
+  src: url(/fonts/FontsFree-Net-Lulo-Clean-W01-One-Bold.ttf);
+}
+.dark-title, .light-title {
+  font-family: 'Lulu-Bold';
+  font-size: 1.5rem;
+}
+.light-title {
+  color: #fff
+}
+.dark-title {
+  color: #000;
+}
+.dark-body-text, .light-body-text {
+  font-family: 'Gotham-Book';
+  font-size: 0.6rem;
+}
+.dark-body-text {
+  color: #000;
+}
+.light-body-text {
+  color: #fff;
+}
+.green-btn {
+  border: none;
+  font-family: 'Lulu-Bold';
+  background-color: #49907f;
+}
+.green-btn:hover {
+  background-color: aquamarine;
+}
+.ghp { // general horizontal padding
+  padding: 0 150px !important;
+}
+.boring-gray-border {
+  border-radius: 0 !important;
+  border: 3px solid lightgray !important;
+}
+.ml-auto {
+  margin-left: auto
+}
+.mr-auto {
+  margin-right: auto;
+}
+.banner-text-container {
+  width: 100%;
+  max-width: 500px;
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+  }
+  p {
+    text-align: start;
+    font-size: 1rem !important;
+    max-height: 100px;
+    height: 100%;
+    margin-bottom: 0;
+    overflow-y: auto;
+  }
+}
+@media (max-width: 1200px) {
+  .banner-text-container {
+    h1 {
+      font-size: 2rem;
+    }
+    p {
+      text-align: start;
+      font-size: 1rem !important;
+      max-height: 60px;
+    }
+  }
+}
+@media (max-width: 991px) {
+  .ghp {
+    padding: 0 100px !important;
+  }
+  .banner-text-container {
+    max-width: 300px;
+    h1 {
+      font-size: 1.5rem;
+    }
+    p {
+      text-align: start;
+      font-size: 0.8rem !important;
+      max-height: 60px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .ghp {
+    padding: 0 50px !important;
+  }
+  .banner-text-container {
+    max-width: 200px;
+    h1 {
+      font-size: 1rem;
+    }
+    p {
+      text-align: start;
+      font-size: 0.7rem !important;
+      max-height: 60px;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .ghp {
+    padding: 0 15px !important;
+  }
+  .banner-text-container {
+    max-width: 150px;
+    h1 {
+      font-size: 0.8rem;
+    }
+    p {
+      text-align: start;
+      font-size: 0.6rem !important;
+      max-height: 40px;
+    }
+  }
 }
 </style>
