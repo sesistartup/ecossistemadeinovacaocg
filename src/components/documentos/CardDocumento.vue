@@ -6,14 +6,17 @@
     </div>
     
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae nobis expedita quod repellendus, pariatur consectetur quam omnis distinctio architecto sint ipsa delectus quisquam iure iste excepturi, aliquid, velit optio corporis.</p>
+    <p>{{ text }}</p>
 
     <button v-if="!hasDownload" type="button" @click="$router.push({ name: 'DocumentosPesquisa', params: { tipoDocumento: title.toLowerCase()}})">Ver mais</button>
-    <button v-else type="button" @click="downloadContent()">Ver mais</button>
+    <a v-else :href="contentToDownload" :download="title" class="btn-simulator">
+      <button type="button" class="hide light-title">Ver mais</button>
+    </a>
   </div>
 </template>
 
 <script setup lang="ts">
+
   const props = defineProps<{
     title: string
     iconPath: string
@@ -23,7 +26,7 @@
     hasDownload: boolean
   }>()
 
-  const downloadContent = () => {
+  const downloadContent = async () => {
     alert('tem que implementar');
   }
 </script>
@@ -35,9 +38,16 @@
   border: 1px solid black;
   padding: 28px 24px;
   display: flex;
+  height: 325px;
   flex-direction: column;
   margin: 10px 0;
-
+  
+  .hide {
+    background-color: unset;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+  }
   > div {
     display: flex;
     align-items: center;
@@ -46,8 +56,14 @@
       margin: 0;
       margin-left: 12px;
       font-weight: bold;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       text-transform: uppercase;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3; /* number of lines to show */
+      line-clamp: 3; 
+      -webkit-box-orient: vertical;
     }
 
     img {
@@ -64,7 +80,7 @@
     max-height: 168px;
   }
 
-  > button {
+  > button, .btn-simulator {
     padding: 4px 24px;
     align-self: center;
     border-radius: 20px;
@@ -75,8 +91,27 @@
     text-transform: uppercase;
     font-size: 14px;
   }
-  > button:hover  {
+  > button:hover, .btn-simulator:hover  {
     background-color: greenyellow;
+  }
+  /* width */
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-color: rgba($color: #ddd, $alpha: 1);
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: gray;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #fff;
   }
 }
 @media (max-width: 576px) {

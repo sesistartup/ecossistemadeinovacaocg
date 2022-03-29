@@ -49,7 +49,6 @@
 <script setup lang="ts">
 import Banner from '../../components/general/Banner.vue';
 import CardNoticia from '../../components/noticias/CardNoticia.vue';
-
 </script>
 
 <style scoped lang="scss">
