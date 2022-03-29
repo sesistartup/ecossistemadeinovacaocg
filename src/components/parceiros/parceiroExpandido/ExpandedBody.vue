@@ -48,7 +48,7 @@ const props = defineProps({
     background-color: #f6f6f6;
     span {
       color: gray;
-      margin-top: 4rem;
+      margin-top: 8rem;
       font-size: 1.2rem;
     }
     main {

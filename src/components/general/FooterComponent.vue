@@ -2,7 +2,12 @@
   <footer class="container-fluid">
     <div class="img-container">
       <img src="/logo_with_text.png" alt="white_logo">
-      <div class="social d-lg-none">
+      <div class="ecossistema-contato d-lg-none text-start" id="below-991">
+        <router-link to="fale-conosco" class="light-title">FALE CONOSCO</router-link>
+        <h5 class="light-body-text">Contato:</h5>
+        <p class="light-body-text">contato@ecossistemadeinovacaocg.com.br</p>
+      </div>
+      <!-- <div class="social d-lg-none">
         <a href="">
           <img src="/linkedin_icon.png" alt="linkedin">
         </a>
@@ -12,46 +17,41 @@
         <a href="">
           <img src="/insta_icon.png" alt="instagram">
         </a>
-      </div>
+      </div> -->
     </div>
-    <div class="container-list">
-      <ul v-for="(item, itemIndex) in info" :key="itemIndex">
-        <span class="light-title">{{ item.title }}</span>
-        <li class="light-body-text" v-for="(info, infoIndex) in item.infos" :key="infoIndex">
-          {{ info }}
-        </li>
-      </ul>
-      <ul class="social">
-        <li class="text-start">
-          <span class="light-title">FALE CONOSCO</span>
-        </li>
-        <li>
-          <a href="">
-            <img src="/linkedin_icon.png" alt="linkedin">
-          </a>
-          <a href="">
-            <img src="/wpp_icon.png" alt="whatsapp">
-          </a>
-          <a href="">
-            <img src="/insta_icon.png" alt="instagram">
-          </a>
-        </li>
-      </ul>
-    </div>
+    <nav class="container-list">
+      <a href="/privacidade_ecossistemacg.pdf" download="POLITICA DE PRIVACIDADE ECOSSISTEMA" class="light-title d-lg-show">Termo de privacidade</a>
+      <router-link class="light-title d-lg-show" to="quem-somos">Quem somos</router-link>
+      <div class="d-lg-none d-flex">
+        <a href="/privacidade_ecossistemacg.pdf" download="POLITICA DE PRIVACIDADE ECOSSISTEMA" class="light-title">Termo de privacidade</a>
+        <router-link class="light-title" to="quem-somos">Quem somos</router-link>
     <div class="vertical-container-list d-md-none">
-      <ul>
+      <ul id="opens">
         <li class="light-body-text"  v-for="(item, itemIndex) in info" :key="itemIndex">
           <span :id="'topico' + itemIndex" class="light-title" @click="showItems(itemIndex)">{{ item.title }}</span>
         </li>
       </ul>
       <div v-for="(item, index) in info.length">
-        <ul v-if="selectedItem === item - 1">
+        <ul :id="'hidden-' + index" v-if="selectedItem === item - 1">
           <li v-for="infoItens in info[selectedItem].infos" class="light-body-text">
             {{ infoItens }}
           </li>
         </ul>
       </div>
     </div>
+      </div>
+      <ul id="regular" v-for="(item, itemIndex) in info" :key="itemIndex">
+        <span class="light-title">{{ item.title }}</span>
+        <li class="light-body-text" v-for="(info, infoIndex) in item.infos" :key="infoIndex">
+          {{ info }}
+        </li>
+      </ul>
+      <div class="ecossistema-contato" id="hides-in-911">
+        <router-link to="fale-conosco" class="light-title">FALE CONOSCO</router-link>
+        <h5 class="light-body-text">Contato:</h5>
+        <p class="light-body-text">contato@ecossistemadeinovacaocg.com.br</p>
+      </div>
+    </nav>
   </footer>
 </template>
 
@@ -89,24 +89,12 @@ onMounted(() => {
 
 const info = [
   {
-    title: 'QUEM SOMOS',
-    infos: ['WHO ARE WE', 'lorem ispum', 'lorem ispum']
-  },
-  {
     title: 'PARCEIROS',
-    infos: ['PARTNERS', 'lorem ispum', 'lorem ispum']
-  },
-  {
-    title: 'NOTÍCIAS',
-    infos: ['NEWS', 'lorem ispum', 'lorem ispum']
+    infos: ['ICTIs', 'Empresas', 'Mecanismos de Inovação', 'Governo', 'Sociedade Organizada']
   },
   {
     title: 'DOCUMENTOS',
-    infos: ['DOCS', 'lorem ispum', 'lorem ispum']
-  },
-  {
-    title: 'AGENDA',
-    infos: ['SCHEDULE', 'lorem ispum', 'lorem ispum']
+    infos: ['Pesquisas', 'Leis', 'Editais']
   }
 ]
 
@@ -119,14 +107,14 @@ const info = [
     position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     height: 160px;
   }
   ul {
     margin-bottom: 0;
     list-style-type: none;
-      height: 80px;
+    text-align: left;
     span, li {
       color: #fff;
     }
@@ -137,6 +125,22 @@ const info = [
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    max-width: 1500px;
+    a, ul {
+      flex: 1 1 auto;
+    }
+    .ecossistema-contato {
+      h5 {
+        font-size: 1rem;
+      }
+      h5, p {
+        margin-top: 1rem;
+        margin-bottom: 0;
+      }
+    }
+  }
+  .light-title {
+    font-size: 0.8rem !important;
   }
   .img-container {
     height: 80px;
@@ -173,13 +177,12 @@ const info = [
   .light-title {
     font-size: 0.6rem;
   }
-  .light-body-text, .light-title {
-    white-space: nowrap;
-  }
   .vertical-container-list {
     display: flex;
-    height: 120px;
-    ul {
+    position: relative;
+    height: 70px;
+    ul#opens {
+      height: 40px;
       li {
         text-align: start;
         margin: 5px 0;
@@ -189,16 +192,24 @@ const info = [
         }
       }
     }
+    ul#hidden-0 {
+      position: absolute;
+      top: -20px;
+      right: -150px;
+    }
+    ul#hidden-1 {
+      position: absolute;
+      top: -20px;
+      right: -70px;
+    }
   }
   .highlight {
     background: radial-gradient(#e66465, #28353e);
   }
-  @media (min-width: 1920px) {
-    .container-list {
-      width: unset;
-      justify-content: center;
-    }
+  #below-991 {
+
   }
+  #hides-in-911 {}
   @media (max-width: 1068px) {
     .img-container {
       width: 200px;
@@ -209,8 +220,40 @@ const info = [
       padding-right: 20px;
       display: flex;
       flex-direction: column;
+      width: fit-content;
+      align-items: flex-start;
     }
-    ul.social {
+    .d-lg-show {
+      display: none;
+    }
+    .container-list {
+      align-items: flex-start;
+    }
+    .d-lg-none {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 10px;
+      height: 120px;
+      a {
+        margin-top: 5px;
+      }
+    }
+    .light-title {
+      font-size: 0.6rem !important;
+    }
+    .light-body-text {
+      font-size: 0.7rem !important;
+    }
+    ul {
+      padding-left: 5px;
+    }
+    ul#regular {
+      max-width: 150px;
+    }
+    #hides-in-911 {
+      display: none;
+    }
+    /* ul.social {
       display: none;
     }
     div.social {
@@ -219,20 +262,38 @@ const info = [
       a:nth-child(2n) {
         margin: 0;
       }
-    }
+    } */
   }
   @media (max-width: 768px) {
-    .container-list {
+    /* .container-list {
+      display: none;
+    } */
+    ul#regular {
       display: none;
     }
+    ul#opens {
+      padding: 0;
+    }
   }
-  @media(max-width: 456px) {
-    footer {
+  @media(max-width: 576px) {
+    footer, .container-list {
       flex-direction: column;
-      height: fit-content;
+      align-items: center;
+    }
+    footer {
+      height: 270px;
+      justify-content: space-around;
     }
     .img-container {
       border-right: none;
+      padding: 0;
+      align-items: center;
+      height: 120px;
+    }
+    .img-container, .container-list {
+      max-width: 350px;
+      width: 100%;
+      align-items: flex-start !important;
     }
     .vertical-container-list {
       margin-top: 20px;

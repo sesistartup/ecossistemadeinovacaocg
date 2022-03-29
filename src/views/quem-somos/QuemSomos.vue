@@ -7,15 +7,15 @@
       img-alt="sobre nós"
     >
       <div class="d-flex h-100 ghp">
-        <h1 class="dark-title">SLOGAN PARA<br>APRESENTAR<br>QUEM SOMOS</h1>
+        <!-- <h1 class="dark-title">SLOGAN PARA<br>APRESENTAR<br>QUEM SOMOS</h1> -->
+        <h1 class="dark-title">ECOSSISTEMA LOCAL<br>DE INOVAÇÃO<br>CAMPO GRANDE – MS</h1>
         <p class="dark-body-text">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam exercitationem, ea mollitia laudantium laborum qui aut est perferendis nisi rem nobis deleniti consequatur impedit unde ullam a sint provident omnis?
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam exercitationem, ea mollitia laudantium laborum qui aut est perferendis nisi rem nobis deleniti consequatur impedit unde ullam a sint provident omnis?
+          Uma comunidade pronta para contribuir com o seu desenvolvimento!
         </p>
       </div>
     </Banner>
     <GeneralContainer 
-      title="A NOSSA HISTÓRIA"
+      title="DE ONDE SURGIMOS"
       :darkTitle="true"
       :hasKnowMoreBtn="false"
       :contentArray="ourStoryContentArray"
@@ -23,7 +23,7 @@
       id="our-story"
     />
     <GeneralContainer 
-      title="MAIS SOBRE NÓS"
+      title="NOSSO PROPÓSITO"
       :darkTitle="true"
       :hasKnowMoreBtn="false"
       :contentArray="moreAboutUs"
@@ -31,7 +31,6 @@
       id="more-about-us"
     />
   </section>
-
   <FooterComponent />
 </template>
 
@@ -41,12 +40,12 @@ import Banner from '../../components/general/Banner.vue';
 import GeneralContainer from '../../components/general/GeneralContainer.vue';
 
 const ourStoryContentArray = reactive([
-  'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam exercitationem, ea mollitia laudantium laborum qui aut est perferendis nisi rem nobis deleniti consequatur impedit unde ullam a sint provident omnis?',
+  'O Ecossistema Local de Inovação – Campo Grande – MS, surge do desejo das instituições e unificar as competências tecnológicas de CAMPO GRANDE na direção do incentivo a inovação e tecnologia. Foi feito um estudo preliminar, para apurar o que temos de capacidade tecnológica e ciências para que essas capacidades sejam mais trabalhadas em prol do desenvolvimento socioeconômico de Campo Grande - MS. A partir disso, foi identificado que existem empresas que ainda não se beneficiam da capacidade tecnológica das instituições de ciência, tecnologia e inovação. Ou seja, mapeamos uma distância que pode ser aproveitada! Um grande grupo de apoio forma-se aqui para que as para que as ações sejam mais rápidas, efetivas e integradas em busca de melhorar a capacidade da inovação tecnológica e trazer o conhecimento para todos sobre as leis e benefícios proporcionados pela legislação.',
   '/quem-somos/our_story.png'
 ])
 const moreAboutUs = reactive([
   '/quem-somos/more_about_us.png',
-  'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam exercitationem, ea mollitia laudantium laborum qui aut est perferendis nisi rem nobis deleniti consequatur impedit unde ullam a sint provident omnis?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam exercitationem, ea mollitia laudantium laborum qui aut est perferendis nisi rem nobis deleniti consequatur impedit unde ullam a sint provident omnis?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam exercitationem, ea mollitia laudantium laborum qui aut est perferendis nisi rem nobis deleniti consequatur impedit unde ullam a sint provident omnis?'
+  'Disponibilizar caminhos norteadores para todos que desejam empreender, crescer e inovar, independente do formato ou tamanho do negócio.  Nosso foco é nos tornarmos referência como polo científico e tecnológico para o Brasil.'
 ])
 </script>
 

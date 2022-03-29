@@ -5,7 +5,7 @@
       <div id="partnersCarousel" class="carousel slide carousel-dark" data-bs-ride="carousel" pause="true">
         <div class="carousel-inner" pause="true">
           <div v-for="(logo, index) in logosUrlArray" :key="index" class="carousel-item" :class="{'active': index === 0}">
-            <img :src="logo" class="d-block w-100" alt="logo parceiro">
+            <img :src="logo" class="d-block" alt="logo parceiro">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#partnersCarousel" data-bs-slide="prev">
@@ -38,9 +38,11 @@
   }
   .carousel-item {
     img {
-      min-width: 240px !important;
+      /* min-width: 240px !important; */
       margin: auto;
+      width: auto;
       max-width: 500px;
+      height: 300px;
     }
   }
   @media (max-width: 768px) {

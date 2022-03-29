@@ -74,6 +74,7 @@ import { Modal } from 'bootstrap';
   onMounted( async () => {
     waitingSetores.value = true;
     waitingSetores.value = await comunicacaoStore.getFaleConoscoSetores();
+    console.log(comunicacaoStore.$state)
   })
 </script>
 

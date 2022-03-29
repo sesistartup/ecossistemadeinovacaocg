@@ -29,6 +29,7 @@ const props = defineProps<{
     // margin: 10px;
     img {
       width: inherit;
+      max-height: 220px;
     }
   }
   .card-parceiro:hover {

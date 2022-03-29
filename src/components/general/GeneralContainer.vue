@@ -10,7 +10,7 @@
           <GeneralBtn v-if="hasKnowMoreBtn"
             btnText="SAIBA MAIS"
             :isExternalLink="false"
-            link="/"
+            link="/quem-somos"
             bgColor="#629282"
             width="150px"
             textColor="#fff"
@@ -70,7 +70,7 @@ onMounted(() => {
     display: flex;
     flex-direction: column;
     margin: 0 15px;
-    max-height: 280px;
+    max-height: inherit;
     overflow-y: auto;
     padding-right: 10px;
   }
