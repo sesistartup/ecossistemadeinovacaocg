@@ -2,6 +2,11 @@
   <footer class="container-fluid">
     <div class="img-container">
       <img src="/logo_with_text.png" alt="white_logo">
+      <div class="ecossistema-contato d-lg-none text-start" id="below-991">
+        <router-link to="fale-conosco" class="light-title">FALE CONOSCO</router-link>
+        <h5 class="light-body-text">Contato:</h5>
+        <p class="light-body-text">contato@ecossistemadeinovacaocg.com.br</p>
+      </div>
       <!-- <div class="social d-lg-none">
         <a href="">
           <img src="/linkedin_icon.png" alt="linkedin">
@@ -27,7 +32,7 @@
         </li>
       </ul>
       <div v-for="(item, index) in info.length">
-        <ul id="hidden-one" v-if="selectedItem === item - 1">
+        <ul :id="'hidden-' + index" v-if="selectedItem === item - 1">
           <li v-for="infoItens in info[selectedItem].infos" class="light-body-text">
             {{ infoItens }}
           </li>
@@ -41,7 +46,7 @@
           {{ info }}
         </li>
       </ul>
-      <div class="ecossistema-contato">
+      <div class="ecossistema-contato" id="hides-in-911">
         <router-link to="fale-conosco" class="light-title">FALE CONOSCO</router-link>
         <h5 class="light-body-text">Contato:</h5>
         <p class="light-body-text">contato@ecossistemadeinovacaocg.com.br</p>
@@ -187,15 +192,24 @@ const info = [
         }
       }
     }
-    ul#hidden-one {
+    ul#hidden-0 {
       position: absolute;
-      top: -30px;
+      top: -20px;
       right: -150px;
+    }
+    ul#hidden-1 {
+      position: absolute;
+      top: -20px;
+      right: -70px;
     }
   }
   .highlight {
     background: radial-gradient(#e66465, #28353e);
   }
+  #below-991 {
+
+  }
+  #hides-in-911 {}
   @media (max-width: 1068px) {
     .img-container {
       width: 200px;
@@ -206,9 +220,14 @@ const info = [
       padding-right: 20px;
       display: flex;
       flex-direction: column;
+      width: fit-content;
+      align-items: flex-start;
     }
     .d-lg-show {
       display: none;
+    }
+    .container-list {
+      align-items: flex-start;
     }
     .d-lg-none {
       flex-direction: column;
@@ -216,7 +235,7 @@ const info = [
       padding-left: 10px;
       height: 120px;
       a {
-        margin: 10px 0;
+        margin-top: 5px;
       }
     }
     .light-title {
@@ -227,6 +246,12 @@ const info = [
     }
     ul {
       padding-left: 5px;
+    }
+    ul#regular {
+      max-width: 150px;
+    }
+    #hides-in-911 {
+      display: none;
     }
     /* ul.social {
       display: none;
@@ -246,14 +271,29 @@ const info = [
     ul#regular {
       display: none;
     }
+    ul#opens {
+      padding: 0;
+    }
   }
-  @media(max-width: 456px) {
-    footer {
+  @media(max-width: 576px) {
+    footer, .container-list {
       flex-direction: column;
-      height: fit-content;
+      align-items: center;
+    }
+    footer {
+      height: 270px;
+      justify-content: space-around;
     }
     .img-container {
       border-right: none;
+      padding: 0;
+      align-items: center;
+      height: 120px;
+    }
+    .img-container, .container-list {
+      max-width: 350px;
+      width: 100%;
+      align-items: flex-start !important;
     }
     .vertical-container-list {
       margin-top: 20px;
